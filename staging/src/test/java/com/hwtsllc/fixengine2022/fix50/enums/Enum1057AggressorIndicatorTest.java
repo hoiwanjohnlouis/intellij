@@ -38,18 +38,18 @@ class Enum1057AggressorIndicatorTest {
         Enum1057AggressorIndicator enumType;
 
         enumType = Enum1057AggressorIndicator.PASSIVE;
-        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("N",enumType.toFIXIDString());
         assertEquals("PASSIVE", enumType.toEnumNameString());
         assertEquals("N - Order initiator is passive", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1057AggressorIndicator.AGGRESSOR;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("AGGRESSOR", enumType.toEnumNameString());
         assertEquals("Y - Order initiator is aggressor", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

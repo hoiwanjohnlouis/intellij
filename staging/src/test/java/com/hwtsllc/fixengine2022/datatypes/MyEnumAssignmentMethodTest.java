@@ -46,18 +46,18 @@ class MyEnumAssignmentMethodTest {
         MyEnumAssignmentMethod enumType;
 
         enumType = MyEnumAssignmentMethod.PRO_RATA;
-        assertEquals( "P", enumType.toEnumIDString());
+        assertEquals( "P", enumType.toFIXIDString());
         assertEquals( "PRO_RATA", enumType.toEnumNameString());
         assertEquals( "P - Pro-rata", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAssignmentMethod.RANDOM;
-        assertEquals( "R", enumType.toEnumIDString());
+        assertEquals( "R", enumType.toFIXIDString());
         assertEquals( "RANDOM", enumType.toEnumNameString());
         assertEquals( "R - Random", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

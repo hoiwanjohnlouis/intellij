@@ -45,7 +45,7 @@ public class Tag31PrcLastPx extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

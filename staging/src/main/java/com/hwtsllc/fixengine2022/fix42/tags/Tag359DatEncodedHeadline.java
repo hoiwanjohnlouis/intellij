@@ -50,7 +50,7 @@ public class Tag359DatEncodedHeadline extends FIX42Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

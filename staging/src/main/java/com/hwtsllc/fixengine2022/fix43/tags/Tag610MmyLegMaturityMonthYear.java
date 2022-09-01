@@ -83,7 +83,7 @@ public class Tag610MmyLegMaturityMonthYear extends FIX43Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -38,18 +38,18 @@ class Enum328InViewOfCommonTest {
         Enum328InViewOfCommon enumType;
 
         enumType = Enum328InViewOfCommon.NO;
-        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Halt was not related to a halt of the common stock", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum328InViewOfCommon.YES;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toEnumNameString());
         assertEquals("Y - Half was due to common stock being halted", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

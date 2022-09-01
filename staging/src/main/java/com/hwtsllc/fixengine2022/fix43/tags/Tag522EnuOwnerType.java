@@ -65,7 +65,7 @@ public class Tag522EnuOwnerType extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -97,7 +97,7 @@ public class Tag522EnuOwnerType extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

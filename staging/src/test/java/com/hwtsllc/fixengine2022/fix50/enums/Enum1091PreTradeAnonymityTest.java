@@ -41,18 +41,18 @@ class Enum1091PreTradeAnonymityTest {
         Enum1091PreTradeAnonymity enumType;
 
         enumType = Enum1091PreTradeAnonymity.NO;
-        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Anonymity not required", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1091PreTradeAnonymity.YES;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toEnumNameString());
         assertEquals("Y - Trader explicitly request anonymity", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

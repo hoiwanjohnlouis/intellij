@@ -47,7 +47,7 @@ public class Tag553StrUsername extends FIX43Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

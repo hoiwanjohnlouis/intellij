@@ -40,12 +40,12 @@ class Tag1051EnuInstrumentPartyRoleTest {
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag1051EnuInstrumentPartyRole(oneEnum);
             assertEquals( "FIX1051_ENU_INSTRUMENT_PARTY_ROLE", tagData.toFIXLabelString());
-            assertEquals( "1051", tagData.toEnumIDString());
+            assertEquals( "1051", tagData.toFIXIDString());
             assertEquals( "INSTRUMENT_PARTY_ROLE", tagData.toEnumNameString());
             assertEquals( "InstrumentPartyRole", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1051EnuInstrumentPartyRoleTest {
         // loop around the ENUM and process
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag1051EnuInstrumentPartyRole(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -506,7 +506,7 @@ class Tag1051EnuInstrumentPartyRoleTest {
             tagData = new Tag1051EnuInstrumentPartyRole(oneEnum);
             assertEquals( "Tag1051EnuInstrumentPartyRole\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

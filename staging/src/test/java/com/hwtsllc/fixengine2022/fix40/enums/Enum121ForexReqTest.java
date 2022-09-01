@@ -39,18 +39,18 @@ class Enum121ForexReqTest {
         Enum121ForexReq enumType;
 
         enumType = Enum121ForexReq.NO;
-        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Do Not Execute Forex After Security Trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum121ForexReq.YES;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toEnumNameString());
         assertEquals("Y - Execute Forex After Security Trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

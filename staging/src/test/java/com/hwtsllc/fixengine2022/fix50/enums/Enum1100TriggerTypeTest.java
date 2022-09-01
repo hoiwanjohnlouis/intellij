@@ -42,34 +42,34 @@ class Enum1100TriggerTypeTest {
         Enum1100TriggerType enumType;
 
         enumType = Enum1100TriggerType.PARTIAL_EXECUTION;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "PARTIAL_EXECUTION", enumType.toEnumNameString() );
         assertEquals( "1 - Partial Execution", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1100TriggerType.SPECIFIED_SESSION;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "SPECIFIED_SESSION", enumType.toEnumNameString() );
         assertEquals( "2 - Specified Trading Session", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1100TriggerType.NEXT_AUCTION;
-        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "NEXT_AUCTION", enumType.toEnumNameString() );
         assertEquals( "3 - Next Auction", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1100TriggerType.PRICE_MOVEMENT;
-        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "PRICE_MOVEMENT", enumType.toEnumNameString() );
         assertEquals( "4 - Price Movement", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

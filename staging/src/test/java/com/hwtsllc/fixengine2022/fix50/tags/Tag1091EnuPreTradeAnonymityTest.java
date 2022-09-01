@@ -40,12 +40,12 @@ class Tag1091EnuPreTradeAnonymityTest {
         for ( Enum1091PreTradeAnonymity oneEnum : Enum1091PreTradeAnonymity.values()) {
             tagData = new Tag1091EnuPreTradeAnonymity(oneEnum);
             assertEquals( "FIX1091_ENU_PRE_TRADE_ANONYMITY", tagData.toFIXLabelString());
-            assertEquals( "1091", tagData.toEnumIDString());
+            assertEquals( "1091", tagData.toFIXIDString());
             assertEquals( "PRE_TRADE_ANONYMITY", tagData.toEnumNameString());
             assertEquals( "PreTradeAnonymity", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1091EnuPreTradeAnonymityTest {
         // loop around the ENUM and process
         for ( Enum1091PreTradeAnonymity oneEnum : Enum1091PreTradeAnonymity.values()) {
             tagData = new Tag1091EnuPreTradeAnonymity(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag1091EnuPreTradeAnonymityTest {
             tagData = new Tag1091EnuPreTradeAnonymity(oneEnum);
             assertEquals( "Tag1091EnuPreTradeAnonymity\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -40,12 +40,12 @@ class Tag780EnuAllocSettlInstTypeTest {
         for ( Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
             tagData = new Tag780EnuAllocSettlInstType(oneEnum);
             assertEquals( "FIX780_ENU_ALLOC_SETTL_INST_TYPE", tagData.toFIXLabelString());
-            assertEquals( "780", tagData.toEnumIDString());
+            assertEquals( "780", tagData.toFIXIDString());
             assertEquals( "ALLOC_SETTL_INST_TYPE", tagData.toEnumNameString());
             assertEquals( "AllocSettlInstType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag780EnuAllocSettlInstTypeTest {
         // loop around the ENUM and process
         for ( Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
             tagData = new Tag780EnuAllocSettlInstType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -107,7 +107,7 @@ class Tag780EnuAllocSettlInstTypeTest {
             tagData = new Tag780EnuAllocSettlInstType(oneEnum);
             assertEquals( "Tag780EnuAllocSettlInstType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -40,26 +40,26 @@ class Enum975UnderlyingSettlementTypeTest {
         Enum975UnderlyingSettlementType enumType;
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_1;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_1", enumType.toEnumNameString() );
         assertEquals( "2 - T+1", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_3;
-        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_3", enumType.toEnumNameString() );
         assertEquals( "4 - T+3", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_4;
-        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_4", enumType.toEnumNameString() );
         assertEquals( "5 - T+4", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

@@ -65,7 +65,7 @@ public class Tag126UtcExpireTime extends FIX40Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

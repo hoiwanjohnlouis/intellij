@@ -40,12 +40,12 @@ class Tag875EnuCPProgramTest {
         for ( Enum875CPProgram oneEnum : Enum875CPProgram.values()) {
             tagData = new Tag875EnuCPProgram(oneEnum);
             assertEquals( "FIX875_ENU_CP_PROGRAM", tagData.toFIXLabelString());
-            assertEquals( "875", tagData.toEnumIDString());
+            assertEquals( "875", tagData.toFIXIDString());
             assertEquals( "CP_PROGRAM", tagData.toEnumNameString());
             assertEquals( "CPProgram", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag875EnuCPProgramTest {
         // loop around the ENUM and process
         for ( Enum875CPProgram oneEnum : Enum875CPProgram.values()) {
             tagData = new Tag875EnuCPProgram(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -100,7 +100,7 @@ class Tag875EnuCPProgramTest {
             tagData = new Tag875EnuCPProgram(oneEnum);
             assertEquals( "Tag875EnuCPProgram\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

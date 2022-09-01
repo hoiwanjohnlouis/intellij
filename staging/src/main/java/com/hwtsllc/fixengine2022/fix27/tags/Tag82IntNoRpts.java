@@ -47,7 +47,7 @@ public class Tag82IntNoRpts extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

@@ -40,18 +40,18 @@ class Enum912LastRptRequestedTest {
         Enum912LastRptRequested enumType;
 
         enumType = Enum912LastRptRequested.NO;
-        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Not last message", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum912LastRptRequested.YES;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toEnumNameString());
         assertEquals("Y - Last message", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

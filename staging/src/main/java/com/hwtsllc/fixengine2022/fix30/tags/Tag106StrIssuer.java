@@ -49,7 +49,7 @@ public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -54,7 +54,7 @@ public class Tag928EnuStatusValue extends FIX44Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -86,7 +86,7 @@ public class Tag928EnuStatusValue extends FIX44Abstract implements LogValuePairS
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

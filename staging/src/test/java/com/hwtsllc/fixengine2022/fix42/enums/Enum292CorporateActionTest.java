@@ -67,204 +67,204 @@ class Enum292CorporateActionTest {
          * A-V msg types
          */
         enumType = Enum292CorporateAction.EX_DIVIDEND;
-        assertEquals( "A", enumType.toEnumIDString());
+        assertEquals( "A", enumType.toFIXIDString());
         assertEquals( "EX_DIVIDEND", enumType.toEnumNameString());
         assertEquals( "A - Ex-Dividend", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.EX_DISTRIBUTION;
-        assertEquals( "B", enumType.toEnumIDString());
+        assertEquals( "B", enumType.toFIXIDString());
         assertEquals( "EX_DISTRIBUTION", enumType.toEnumNameString());
         assertEquals( "B - Ex-Distribution", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.EX_RIGHTS;
-        assertEquals( "C", enumType.toEnumIDString());
+        assertEquals( "C", enumType.toFIXIDString());
         assertEquals( "EX_RIGHTS", enumType.toEnumNameString());
         assertEquals( "C - Ex-Rights", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.NEW;
-        assertEquals( "D", enumType.toEnumIDString());
+        assertEquals( "D", enumType.toFIXIDString());
         assertEquals( "NEW", enumType.toEnumNameString());
         assertEquals( "D - New", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.EX_INTEREST;
-        assertEquals( "E", enumType.toEnumIDString());
+        assertEquals( "E", enumType.toFIXIDString());
         assertEquals( "EX_INTEREST", enumType.toEnumNameString());
         assertEquals( "E - Ex-Interest", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum292CorporateAction.CASH_DIVIDEND;
-        assertEquals( "F", enumType.toEnumIDString());
+        assertEquals( "F", enumType.toFIXIDString());
         assertEquals( "CASH_DIVIDEND", enumType.toEnumNameString());
         assertEquals( "F - Cash Dividend", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.STOCK_DIVIDEND;
-        assertEquals( "G", enumType.toEnumIDString());
+        assertEquals( "G", enumType.toFIXIDString());
         assertEquals( "STOCK_DIVIDEND", enumType.toEnumNameString());
         assertEquals( "G - Stock Dividend", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.NON_INTEGER_STOCK_SPLIT;
-        assertEquals( "H", enumType.toEnumIDString());
+        assertEquals( "H", enumType.toFIXIDString());
         assertEquals( "NON_INTEGER_STOCK_SPLIT", enumType.toEnumNameString());
         assertEquals( "H - Non-Integer Stock Split", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.REVERSE_STOCK_SPLIT;
-        assertEquals( "I", enumType.toEnumIDString());
+        assertEquals( "I", enumType.toFIXIDString());
         assertEquals( "REVERSE_STOCK_SPLIT", enumType.toEnumNameString());
         assertEquals( "I - Reverse Stock Split", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.STANDARD_INTEGER_STOCK_SPLIT;
-        assertEquals( "J", enumType.toEnumIDString());
+        assertEquals( "J", enumType.toFIXIDString());
         assertEquals( "STANDARD_INTEGER_STOCK_SPLIT", enumType.toEnumNameString());
         assertEquals( "J - Standard-Integer Stock Split", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum292CorporateAction.POSITION_CONSOLIDATION;
-        assertEquals( "K", enumType.toEnumIDString());
+        assertEquals( "K", enumType.toFIXIDString());
         assertEquals( "POSITION_CONSOLIDATION", enumType.toEnumNameString());
         assertEquals( "K - Position Consolidation", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.LIQUIDATION_REORGANIZATION;
-        assertEquals( "L", enumType.toEnumIDString());
+        assertEquals( "L", enumType.toFIXIDString());
         assertEquals( "LIQUIDATION_REORGANIZATION", enumType.toEnumNameString());
         assertEquals( "L - Liquidation Reorganization", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.MERGER_REORGANIZATION;
-        assertEquals( "M", enumType.toEnumIDString());
+        assertEquals( "M", enumType.toFIXIDString());
         assertEquals( "MERGER_REORGANIZATION", enumType.toEnumNameString());
         assertEquals( "M - Merger Reorganization", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.RIGHTS_OFFERING;
-        assertEquals( "N", enumType.toEnumIDString());
+        assertEquals( "N", enumType.toFIXIDString());
         assertEquals( "RIGHTS_OFFERING", enumType.toEnumNameString());
         assertEquals( "N - Rights Offering", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.SHAREHOLDER_MEETING;
-        assertEquals( "O", enumType.toEnumIDString());
+        assertEquals( "O", enumType.toFIXIDString());
         assertEquals( "SHAREHOLDER_MEETING", enumType.toEnumNameString());
         assertEquals( "O - Shareholder Meeting", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum292CorporateAction.SPINOFF;
-        assertEquals( "P", enumType.toEnumIDString());
+        assertEquals( "P", enumType.toFIXIDString());
         assertEquals( "SPINOFF", enumType.toEnumNameString());
         assertEquals( "P - Spinoff", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.TENDER_OFFER;
-        assertEquals( "Q", enumType.toEnumIDString());
+        assertEquals( "Q", enumType.toFIXIDString());
         assertEquals( "TENDER_OFFER", enumType.toEnumNameString());
         assertEquals( "Q - Tender Offer", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.WARRANT;
-        assertEquals( "R", enumType.toEnumIDString());
+        assertEquals( "R", enumType.toFIXIDString());
         assertEquals( "WARRANT", enumType.toEnumNameString());
         assertEquals( "R - Warrant", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.SPECIAL_ACTION;
-        assertEquals( "S", enumType.toEnumIDString());
+        assertEquals( "S", enumType.toFIXIDString());
         assertEquals( "SPECIAL_ACTION", enumType.toEnumNameString());
         assertEquals( "S - Special Action", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.SYMBOL_CONVERSION;
-        assertEquals( "T", enumType.toEnumIDString());
+        assertEquals( "T", enumType.toFIXIDString());
         assertEquals( "SYMBOL_CONVERSION", enumType.toEnumNameString());
         assertEquals( "T - Symbol Conversion", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum292CorporateAction.CUSIP_OR_NAME_CHANGE;
-        assertEquals( "U", enumType.toEnumIDString());
+        assertEquals( "U", enumType.toFIXIDString());
         assertEquals( "CUSIP_OR_NAME_CHANGE", enumType.toEnumNameString());
         assertEquals( "U - CUSIP / Name Change", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum292CorporateAction.LEAP_ROLLOVER;
-        assertEquals( "V", enumType.toEnumIDString());
+        assertEquals( "V", enumType.toFIXIDString());
         assertEquals( "LEAP_ROLLOVER", enumType.toEnumNameString());
         assertEquals( "V - Leap Rollover", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

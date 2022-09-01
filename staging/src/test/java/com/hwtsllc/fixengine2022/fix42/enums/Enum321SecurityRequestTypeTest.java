@@ -48,43 +48,43 @@ class Enum321SecurityRequestTypeTest {
          * 0-3 msg types
          */
         enumType = Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY;
-        assertEquals( "0", enumType.toEnumIDString());
+        assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "REQUEST_SECURITY_IDENTITY", enumType.toEnumNameString());
         assertEquals( "0 - Request Security identity and specifications", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY;
-        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "REQUEST_SPECIFIED_SECURITY", enumType.toEnumNameString());
         assertEquals( "1 - Request Security identity for the specifications provided " +
                         "(name of the security is not supplied)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "REQUEST_LIST_SECURITY_TYPES", enumType.toEnumNameString());
         assertEquals( "2 - Request List Security Types", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum321SecurityRequestType.REQUEST_LIST_SECURITIES;
-        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "REQUEST_LIST_SECURITIES", enumType.toEnumNameString());
         assertEquals( "3 - Request List Securities " +
                         "(can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. " +
                         "If provided, then only list Securities for the specific type.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

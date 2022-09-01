@@ -50,7 +50,7 @@ public class Tag1075AmtLegGrossTradeAmt extends FIX50Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

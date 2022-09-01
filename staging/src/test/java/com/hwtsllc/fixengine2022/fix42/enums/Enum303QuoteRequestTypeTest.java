@@ -43,20 +43,20 @@ class Enum303QuoteRequestTypeTest {
          * 1-2 msg types
          */
         enumType = Enum303QuoteRequestType.MANUAL;
-        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "MANUAL", enumType.toEnumNameString());
         assertEquals( "1 - Manual", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum303QuoteRequestType.AUTOMATIC;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "AUTOMATIC", enumType.toEnumNameString());
         assertEquals( "2 - Automatic", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

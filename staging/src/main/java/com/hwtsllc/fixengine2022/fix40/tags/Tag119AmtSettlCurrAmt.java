@@ -48,7 +48,7 @@ public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

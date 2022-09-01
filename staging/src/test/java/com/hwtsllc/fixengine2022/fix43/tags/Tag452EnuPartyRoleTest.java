@@ -40,11 +40,11 @@ class Tag452EnuPartyRoleTest {
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( "FIX452_ENU_PARTY_ROLE", tagData.toFIXLabelString());
-            assertEquals( "452", tagData.toEnumIDString());
+            assertEquals( "452", tagData.toFIXIDString());
             assertEquals( "PARTY_ROLE", tagData.toEnumNameString());
             assertEquals( "PartyRole", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag452EnuPartyRoleTest {
         // loop around the ENUM and process
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -506,7 +506,7 @@ class Tag452EnuPartyRoleTest {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( "Tag452EnuPartyRole\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -48,18 +48,18 @@ class MyEnumPutOrCallTest {
          * 0-1 msg types
          */
         enumType = MyEnumPutOrCall.PUT;
-        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("0", enumType.toFIXIDString());
         assertEquals("PUT", enumType.toEnumNameString());
         assertEquals("0 - Put", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumPutOrCall.CALL;
-        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("1", enumType.toFIXIDString());
         assertEquals("CALL", enumType.toEnumNameString());
         assertEquals("1 - Call", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

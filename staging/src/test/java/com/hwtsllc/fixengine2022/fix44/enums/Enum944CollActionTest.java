@@ -40,26 +40,26 @@ class Enum944CollActionTest {
         Enum944CollAction enumType;
 
         enumType = Enum944CollAction.RETAIN;
-        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "RETAIN", enumType.toEnumNameString() );
         assertEquals( "0 - Retain", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum944CollAction.ADD;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "ADD", enumType.toEnumNameString() );
         assertEquals( "1 - Add", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum944CollAction.REMOVE;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "REMOVE", enumType.toEnumNameString() );
         assertEquals( "2 - Remove", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

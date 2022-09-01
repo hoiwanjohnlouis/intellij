@@ -56,7 +56,7 @@ public class Tag628StrHopCompID extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

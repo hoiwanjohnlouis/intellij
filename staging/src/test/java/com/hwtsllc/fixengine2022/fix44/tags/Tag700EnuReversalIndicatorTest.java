@@ -40,12 +40,12 @@ class Tag700EnuReversalIndicatorTest {
         for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
             tagData = new Tag700EnuReversalIndicator(oneEnum);
             assertEquals( "FIX700_ENU_REVERSAL_INDICATOR", tagData.toFIXLabelString());
-            assertEquals( "700", tagData.toEnumIDString());
+            assertEquals( "700", tagData.toFIXIDString());
             assertEquals( "REVERSAL_INDICATOR", tagData.toEnumNameString());
             assertEquals( "ReversalIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag700EnuReversalIndicatorTest {
         // loop around the ENUM and process
         for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
             tagData = new Tag700EnuReversalIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag700EnuReversalIndicatorTest {
             tagData = new Tag700EnuReversalIndicator(oneEnum);
             assertEquals( "Tag700EnuReversalIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

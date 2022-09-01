@@ -47,7 +47,7 @@ public class Tag991PrcRndPx extends FIX50Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

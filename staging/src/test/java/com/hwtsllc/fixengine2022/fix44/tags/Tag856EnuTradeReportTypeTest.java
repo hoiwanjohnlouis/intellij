@@ -40,12 +40,12 @@ class Tag856EnuTradeReportTypeTest {
         for ( Enum856TradeReportType oneEnum : Enum856TradeReportType.values()) {
             tagData = new Tag856EnuTradeReportType(oneEnum);
             assertEquals( "FIX856_ENU_TRADE_REPORT_TYPE", tagData.toFIXLabelString());
-            assertEquals( "856", tagData.toEnumIDString());
+            assertEquals( "856", tagData.toFIXIDString());
             assertEquals( "TRADE_REPORT_TYPE", tagData.toEnumNameString());
             assertEquals( "TradeReportType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag856EnuTradeReportTypeTest {
         // loop around the ENUM and process
         for ( Enum856TradeReportType oneEnum : Enum856TradeReportType.values()) {
             tagData = new Tag856EnuTradeReportType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -168,7 +168,7 @@ class Tag856EnuTradeReportTypeTest {
             tagData = new Tag856EnuTradeReportType(oneEnum);
             assertEquals( "Tag856EnuTradeReportType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

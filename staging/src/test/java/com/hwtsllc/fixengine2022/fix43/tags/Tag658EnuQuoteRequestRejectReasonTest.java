@@ -40,11 +40,11 @@ class Tag658EnuQuoteRequestRejectReasonTest {
         for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
             tagData = new Tag658EnuQuoteRequestRejectReason(oneEnum);
             assertEquals( "FIX658_ENU_QUOTE_REQUEST_REJECT_REASON", tagData.toFIXLabelString());
-            assertEquals( "658", tagData.toEnumIDString());
+            assertEquals( "658", tagData.toFIXIDString());
             assertEquals( "QUOTE_REQUEST_REJECT_REASON", tagData.toEnumNameString());
             assertEquals( "QuoteRequestRejectReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag658EnuQuoteRequestRejectReasonTest {
         // loop around the ENUM and process
         for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
             tagData = new Tag658EnuQuoteRequestRejectReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -150,7 +150,7 @@ class Tag658EnuQuoteRequestRejectReasonTest {
             tagData = new Tag658EnuQuoteRequestRejectReason(oneEnum);
             assertEquals( "Tag658EnuQuoteRequestRejectReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

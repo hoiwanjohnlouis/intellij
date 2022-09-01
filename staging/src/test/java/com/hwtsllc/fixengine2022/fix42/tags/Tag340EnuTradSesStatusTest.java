@@ -40,11 +40,11 @@ class Tag340EnuTradSesStatusTest {
         for ( Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
             tagData = new Tag340EnuTradSesStatus(oneEnum);
             assertEquals( "FIX340_ENU_TRAD_SES_STATUS", tagData.toFIXLabelString());
-            assertEquals( "340", tagData.toEnumIDString());
+            assertEquals( "340", tagData.toFIXIDString());
             assertEquals( "TRAD_SES_STATUS", tagData.toEnumNameString());
             assertEquals( "TradSesStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag340EnuTradSesStatusTest {
         // loop around the ENUM and process
         for ( Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
             tagData = new Tag340EnuTradSesStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -121,7 +121,7 @@ class Tag340EnuTradSesStatusTest {
             tagData = new Tag340EnuTradSesStatus(oneEnum);
             assertEquals( "Tag340EnuTradSesStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

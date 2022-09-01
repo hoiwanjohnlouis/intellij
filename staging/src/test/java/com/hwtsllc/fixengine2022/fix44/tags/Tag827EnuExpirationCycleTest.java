@@ -40,12 +40,12 @@ class Tag827EnuExpirationCycleTest {
         for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
             assertEquals( "FIX827_ENU_EXPIRATION_CYCLE", tagData.toFIXLabelString());
-            assertEquals( "827", tagData.toEnumIDString());
+            assertEquals( "827", tagData.toFIXIDString());
             assertEquals( "EXPIRATION_CYCLE", tagData.toEnumNameString());
             assertEquals( "ExpirationCycle", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag827EnuExpirationCycleTest {
         // loop around the ENUM and process
         for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag827EnuExpirationCycleTest {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
             assertEquals( "Tag827EnuExpirationCycle\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

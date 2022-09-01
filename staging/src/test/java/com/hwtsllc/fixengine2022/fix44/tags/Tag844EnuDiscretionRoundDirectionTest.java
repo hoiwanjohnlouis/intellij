@@ -40,12 +40,12 @@ class Tag844EnuDiscretionRoundDirectionTest {
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag844EnuDiscretionRoundDirection(oneEnum);
             assertEquals( "FIX844_ENU_DISCRETION_ROUND_DIRECTION", tagData.toFIXLabelString());
-            assertEquals( "844", tagData.toEnumIDString());
+            assertEquals( "844", tagData.toFIXIDString());
             assertEquals( "DISCRETION_ROUND_DIRECTION", tagData.toEnumNameString());
             assertEquals( "DiscretionRoundDirection", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag844EnuDiscretionRoundDirectionTest {
         // loop around the ENUM and process
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag844EnuDiscretionRoundDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -94,7 +94,7 @@ class Tag844EnuDiscretionRoundDirectionTest {
             tagData = new Tag844EnuDiscretionRoundDirection(oneEnum);
             assertEquals( "Tag844EnuDiscretionRoundDirection\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

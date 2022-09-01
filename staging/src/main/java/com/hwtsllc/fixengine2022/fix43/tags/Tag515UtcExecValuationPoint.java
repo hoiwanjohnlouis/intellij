@@ -47,7 +47,7 @@ public class Tag515UtcExecValuationPoint extends FIX43Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

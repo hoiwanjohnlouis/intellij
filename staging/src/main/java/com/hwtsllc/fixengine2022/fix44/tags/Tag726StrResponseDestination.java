@@ -52,7 +52,7 @@ public class Tag726StrResponseDestination extends FIX44Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -49,7 +49,7 @@ public class Tag526StrSecondaryClOrdID extends FIX43Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

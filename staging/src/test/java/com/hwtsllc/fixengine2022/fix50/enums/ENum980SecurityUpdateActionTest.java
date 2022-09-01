@@ -39,26 +39,26 @@ class ENum980SecurityUpdateActionTest {
         ENum980SecurityUpdateAction enumType;
 
         enumType = ENum980SecurityUpdateAction.ADD;
-        assertEquals( "A", enumType.toEnumIDString() );
+        assertEquals( "A", enumType.toFIXIDString() );
         assertEquals( "ADD", enumType.toEnumNameString() );
         assertEquals( "A - Add", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = ENum980SecurityUpdateAction.DELETE;
-        assertEquals( "D", enumType.toEnumIDString() );
+        assertEquals( "D", enumType.toFIXIDString() );
         assertEquals( "DELETE", enumType.toEnumNameString() );
         assertEquals( "D - Delete", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = ENum980SecurityUpdateAction.MODIFY;
-        assertEquals( "M", enumType.toEnumIDString() );
+        assertEquals( "M", enumType.toFIXIDString() );
         assertEquals( "MODIFY", enumType.toEnumNameString() );
         assertEquals( "M - Modify", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

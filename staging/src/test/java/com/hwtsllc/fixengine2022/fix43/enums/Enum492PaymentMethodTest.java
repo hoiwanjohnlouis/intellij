@@ -63,124 +63,124 @@ class Enum492PaymentMethodTest {
          * 1-15 types
          */
         enumType = Enum492PaymentMethod.CREST;
-        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("1", enumType.toFIXIDString());
         assertEquals("CREST", enumType.toEnumNameString());
         assertEquals("1 - CREST", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.NSCC;
-        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("2", enumType.toFIXIDString());
         assertEquals("NSCC", enumType.toEnumNameString());
         assertEquals("2 - NSCC", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.EUROCLEAR;
-        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("3", enumType.toFIXIDString());
         assertEquals("EUROCLEAR", enumType.toEnumNameString());
         assertEquals("3 - Euroclear", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.CLEARSTREAM;
-        assertEquals("4", enumType.toEnumIDString());
+        assertEquals("4", enumType.toFIXIDString());
         assertEquals("CLEARSTREAM", enumType.toEnumNameString());
         assertEquals("4 - Clearstream", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.CHEQUE;
-        assertEquals("5", enumType.toEnumIDString());
+        assertEquals("5", enumType.toFIXIDString());
         assertEquals("CHEQUE", enumType.toEnumNameString());
         assertEquals("5 - Cheque", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum492PaymentMethod.TELEGRAPHIC_TRANSFER;
-        assertEquals("6", enumType.toEnumIDString());
+        assertEquals("6", enumType.toFIXIDString());
         assertEquals("TELEGRAPHIC_TRANSFER", enumType.toEnumNameString());
         assertEquals("6 - Telegraphic Transfer", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.FED_WIRE;
-        assertEquals("7", enumType.toEnumIDString());
+        assertEquals("7", enumType.toFIXIDString());
         assertEquals("FED_WIRE", enumType.toEnumNameString());
         assertEquals("7 - Fed Wire", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.DEBIT_CARD;
-        assertEquals("8", enumType.toEnumIDString());
+        assertEquals("8", enumType.toFIXIDString());
         assertEquals("DEBIT_CARD", enumType.toEnumNameString());
         assertEquals("8 - Debit Card", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.DIRECT_DEBIT;
-        assertEquals("9", enumType.toEnumIDString());
+        assertEquals("9", enumType.toFIXIDString());
         assertEquals("DIRECT_DEBIT", enumType.toEnumNameString());
         assertEquals("9 - Direct Debit (BECS)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.DIRECT_CREDIT;
-        assertEquals("10", enumType.toEnumIDString());
+        assertEquals("10", enumType.toFIXIDString());
         assertEquals("DIRECT_CREDIT", enumType.toEnumNameString());
         assertEquals("10 - Direct Credit (BECS)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum492PaymentMethod.CREDIT_CARD;
-        assertEquals("11", enumType.toEnumIDString());
+        assertEquals("11", enumType.toFIXIDString());
         assertEquals("CREDIT_CARD", enumType.toEnumNameString());
         assertEquals("11 - Credit Card", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.ACH_DEBIT;
-        assertEquals("12", enumType.toEnumIDString());
+        assertEquals("12", enumType.toFIXIDString());
         assertEquals("ACH_DEBIT", enumType.toEnumNameString());
         assertEquals("12 - ACH Debit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.ACH_CREDIT;
-        assertEquals("13", enumType.toEnumIDString());
+        assertEquals("13", enumType.toFIXIDString());
         assertEquals("ACH_CREDIT", enumType.toEnumNameString());
         assertEquals("13 - ACH Credit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.BPAY;
-        assertEquals("14", enumType.toEnumIDString());
+        assertEquals("14", enumType.toFIXIDString());
         assertEquals("BPAY", enumType.toEnumNameString());
         assertEquals("14 - BPAY", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM;
-        assertEquals("15", enumType.toEnumIDString());
+        assertEquals("15", enumType.toFIXIDString());
         assertEquals("HVACS", enumType.toEnumNameString());
         assertEquals("15 - High Value Clearing System (HVACS)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

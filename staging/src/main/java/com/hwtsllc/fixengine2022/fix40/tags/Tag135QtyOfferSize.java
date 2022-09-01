@@ -49,7 +49,7 @@ public class Tag135QtyOfferSize extends FIX40Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

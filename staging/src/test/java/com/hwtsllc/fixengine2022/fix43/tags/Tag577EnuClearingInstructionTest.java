@@ -40,11 +40,11 @@ class Tag577EnuClearingInstructionTest {
         for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
             tagData = new Tag577EnuClearingInstruction(oneEnum);
             assertEquals( "FIX577_ENU_CLEARING_INSTRUCTION", tagData.toFIXLabelString());
-            assertEquals( "577", tagData.toEnumIDString());
+            assertEquals( "577", tagData.toFIXIDString());
             assertEquals( "CLEARING_INSTRUCTION", tagData.toEnumNameString());
             assertEquals( "ClearingInstruction", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag577EnuClearingInstructionTest {
         // loop around the ENUM and process
         for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
             tagData = new Tag577EnuClearingInstruction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -156,7 +156,7 @@ class Tag577EnuClearingInstructionTest {
             tagData = new Tag577EnuClearingInstruction(oneEnum);
             assertEquals( "Tag577EnuClearingInstruction\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -79,7 +79,7 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -111,7 +111,7 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

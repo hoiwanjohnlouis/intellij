@@ -50,66 +50,66 @@ class Enum340TradSesStatusTest {
          * 0-6 msg types
          */
         enumType = Enum340TradSesStatus.UNKNOWN;
-        assertEquals( "0", enumType.toEnumIDString());
+        assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "UNKNOWN", enumType.toEnumNameString());
         assertEquals( "0 - Unknown", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum340TradSesStatus.HALTED;
-        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "HALTED", enumType.toEnumNameString());
         assertEquals( "1 - Halted", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum340TradSesStatus.OPEN;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "OPEN", enumType.toEnumNameString());
         assertEquals( "2 - Open", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum340TradSesStatus.CLOSED;
-        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "CLOSED", enumType.toEnumNameString());
         assertEquals( "3 - Closed", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum340TradSesStatus.PRE_OPEN;
-        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "PRE_OPEN", enumType.toEnumNameString());
         assertEquals( "4 - Pre-Open", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum340TradSesStatus.PRE_CLOSE;
-        assertEquals( "5", enumType.toEnumIDString());
+        assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "PRE_CLOSE", enumType.toEnumNameString());
         assertEquals( "5 - Pre-Close", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum340TradSesStatus.REQUEST_REJECTED;
-        assertEquals( "6", enumType.toEnumIDString());
+        assertEquals( "6", enumType.toFIXIDString());
         assertEquals( "REQUEST_REJECTED", enumType.toEnumNameString());
         assertEquals( "6 - Request Rejected", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

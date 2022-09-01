@@ -50,7 +50,7 @@ public class Tag1023IntMDPriceLevel extends FIX50Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

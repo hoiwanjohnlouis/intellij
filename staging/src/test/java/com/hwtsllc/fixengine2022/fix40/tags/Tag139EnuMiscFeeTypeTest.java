@@ -41,11 +41,11 @@ class Tag139EnuMiscFeeTypeTest {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
             assertEquals( "FIX139_ENU_MISC_FEE_TYPE", tagData.toFIXLabelString());
             assertEquals( "MISC_FEE_TYPE", tagData.toEnumNameString());
-            assertEquals( "139", tagData.toEnumIDString());
+            assertEquals( "139", tagData.toFIXIDString());
             assertEquals( "MiscFeeType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag139EnuMiscFeeTypeTest {
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -156,7 +156,7 @@ class Tag139EnuMiscFeeTypeTest {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
             assertEquals( "Tag139EnuMiscFeeType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

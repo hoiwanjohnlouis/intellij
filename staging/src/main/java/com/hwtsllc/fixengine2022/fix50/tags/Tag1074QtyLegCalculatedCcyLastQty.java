@@ -49,7 +49,7 @@ public class Tag1074QtyLegCalculatedCcyLastQty extends FIX50Abstract implements 
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

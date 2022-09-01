@@ -59,7 +59,7 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -91,7 +91,7 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

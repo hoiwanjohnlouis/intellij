@@ -47,7 +47,7 @@ public class Tag1099StrPegSecurityDesc extends FIX50Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

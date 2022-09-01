@@ -51,7 +51,7 @@ public class Tag175StrSettlInstCode extends FIX41Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

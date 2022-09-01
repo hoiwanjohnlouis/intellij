@@ -47,7 +47,7 @@ public class Tag555NumNoLegs extends FIX43Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

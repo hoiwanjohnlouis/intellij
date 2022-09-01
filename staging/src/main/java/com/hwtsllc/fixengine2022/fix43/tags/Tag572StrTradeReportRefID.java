@@ -47,7 +47,7 @@ public class Tag572StrTradeReportRefID extends FIX43Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -48,7 +48,7 @@ public class Tag756NumNoNested2PartyIDs extends FIX44Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

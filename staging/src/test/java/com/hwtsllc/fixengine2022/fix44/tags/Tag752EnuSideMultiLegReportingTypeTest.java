@@ -40,12 +40,12 @@ class Tag752EnuSideMultiLegReportingTypeTest {
         for ( Enum752SideMultiLegReportingType oneEnum : Enum752SideMultiLegReportingType.values()) {
             tagData = new Tag752EnuSideMultiLegReportingType(oneEnum);
             assertEquals( "FIX752_ENU_SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toFIXLabelString());
-            assertEquals( "752", tagData.toEnumIDString());
+            assertEquals( "752", tagData.toFIXIDString());
             assertEquals( "SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toEnumNameString());
             assertEquals( "SideMultiLegReportingType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag752EnuSideMultiLegReportingTypeTest {
         // loop around the ENUM and process
         for ( Enum752SideMultiLegReportingType oneEnum : Enum752SideMultiLegReportingType.values()) {
             tagData = new Tag752EnuSideMultiLegReportingType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -97,7 +97,7 @@ class Tag752EnuSideMultiLegReportingTypeTest {
             tagData = new Tag752EnuSideMultiLegReportingType(oneEnum);
             assertEquals( "Tag752EnuSideMultiLegReportingType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

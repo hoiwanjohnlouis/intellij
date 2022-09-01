@@ -40,12 +40,12 @@ class Tag750EnuTradeRequestStatusTest {
         for ( Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
             tagData = new Tag750EnuTradeRequestStatus(oneEnum);
             assertEquals( "FIX750_ENU_TRADE_REQUEST_STATUS", tagData.toFIXLabelString());
-            assertEquals( "750", tagData.toEnumIDString());
+            assertEquals( "750", tagData.toFIXIDString());
             assertEquals( "TRADE_REQUEST_STATUS", tagData.toEnumNameString());
             assertEquals( "TradeRequestStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag750EnuTradeRequestStatusTest {
         // loop around the ENUM and process
         for ( Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
             tagData = new Tag750EnuTradeRequestStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -97,7 +97,7 @@ class Tag750EnuTradeRequestStatusTest {
             tagData = new Tag750EnuTradeRequestStatus(oneEnum);
             assertEquals( "Tag750EnuTradeRequestStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

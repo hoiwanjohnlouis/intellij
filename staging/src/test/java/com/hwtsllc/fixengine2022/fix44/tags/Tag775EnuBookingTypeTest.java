@@ -40,12 +40,12 @@ class Tag775EnuBookingTypeTest {
         for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
             tagData = new Tag775EnuBookingType(oneEnum);
             assertEquals( "FIX775_ENU_BOOKING_TYPE", tagData.toFIXLabelString());
-            assertEquals( "775", tagData.toEnumIDString());
+            assertEquals( "775", tagData.toFIXIDString());
             assertEquals( "BOOKING_TYPE", tagData.toEnumNameString());
             assertEquals( "BookingType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag775EnuBookingTypeTest {
         // loop around the ENUM and process
         for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
             tagData = new Tag775EnuBookingType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -97,7 +97,7 @@ class Tag775EnuBookingTypeTest {
             tagData = new Tag775EnuBookingType(oneEnum);
             assertEquals( "Tag775EnuBookingType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

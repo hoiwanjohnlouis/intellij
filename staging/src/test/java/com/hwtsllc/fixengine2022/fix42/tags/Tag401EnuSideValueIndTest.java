@@ -40,11 +40,11 @@ class Tag401EnuSideValueIndTest {
         for ( Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
             assertEquals( "FIX401_ENU_SIDE_VALUE_IND", tagData.toFIXLabelString());
-            assertEquals( "401", tagData.toEnumIDString());
+            assertEquals( "401", tagData.toFIXIDString());
             assertEquals( "SIDE_VALUE_IND", tagData.toEnumNameString());
             assertEquals( "SideValueInd", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag401EnuSideValueIndTest {
         // loop around the ENUM and process
         for ( Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag401EnuSideValueIndTest {
             tagData = new Tag401EnuSideValueInd(oneEnum);
             assertEquals( "Tag401EnuSideValueInd\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

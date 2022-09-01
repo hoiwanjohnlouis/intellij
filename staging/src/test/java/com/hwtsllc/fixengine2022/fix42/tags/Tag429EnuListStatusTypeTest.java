@@ -40,11 +40,11 @@ class Tag429EnuListStatusTypeTest {
         for ( Enum429ListStatusType oneEnum : Enum429ListStatusType.values()) {
             tagData = new Tag429EnuListStatusType(oneEnum);
             assertEquals( "FIX429_ENU_LIST_STATUS_TYPE", tagData.toFIXLabelString());
-            assertEquals( "429", tagData.toEnumIDString());
+            assertEquals( "429", tagData.toFIXIDString());
             assertEquals( "LIST_STATUS_TYPE", tagData.toEnumNameString());
             assertEquals( "ListStatusType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag429EnuListStatusTypeTest {
         // loop around the ENUM and process
         for ( Enum429ListStatusType oneEnum : Enum429ListStatusType.values()) {
             tagData = new Tag429EnuListStatusType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -115,7 +115,7 @@ class Tag429EnuListStatusTypeTest {
             tagData = new Tag429EnuListStatusType(oneEnum);
             assertEquals( "Tag429EnuListStatusType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

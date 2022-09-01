@@ -40,11 +40,11 @@ class Tag258EnuTradedFlatSwitchTest {
         for ( Enum258TradedFlatSwitch oneEnum : Enum258TradedFlatSwitch.values()) {
             tagData = new Tag258EnuTradedFlatSwitch(oneEnum);
             assertEquals( "FIX258_ENU_TRADED_FLAT_SWITCH", tagData.toFIXLabelString());
-            assertEquals( "258", tagData.toEnumIDString());
+            assertEquals( "258", tagData.toFIXIDString());
             assertEquals( "TRADED_FLAT_SWITCH", tagData.toEnumNameString());
             assertEquals( "TradedFlatSwitch", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag258EnuTradedFlatSwitchTest {
         // loop around the ENUM and process
         for ( Enum258TradedFlatSwitch oneEnum : Enum258TradedFlatSwitch.values()) {
             tagData = new Tag258EnuTradedFlatSwitch(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag258EnuTradedFlatSwitchTest {
             tagData = new Tag258EnuTradedFlatSwitch(oneEnum);
             assertEquals( "Tag258EnuTradedFlatSwitch\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

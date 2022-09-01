@@ -47,7 +47,7 @@ public class Tag822StrUnderlyingTradingSessionID extends FIX44Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

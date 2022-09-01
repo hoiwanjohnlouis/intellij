@@ -49,7 +49,7 @@ public class Tag62StrValidUntilTime extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

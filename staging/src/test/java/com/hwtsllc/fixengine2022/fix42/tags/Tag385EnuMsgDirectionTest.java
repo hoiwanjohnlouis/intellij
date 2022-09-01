@@ -40,11 +40,11 @@ class Tag385EnuMsgDirectionTest {
         for ( Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
             assertEquals( "FIX385_ENU_MSG_DIRECTION", tagData.toFIXLabelString());
-            assertEquals( "385", tagData.toEnumIDString());
+            assertEquals( "385", tagData.toFIXIDString());
             assertEquals( "MSG_DIRECTION", tagData.toEnumNameString());
             assertEquals( "MsgDirection", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag385EnuMsgDirectionTest {
         // loop around the ENUM and process
         for ( Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag385EnuMsgDirectionTest {
             tagData = new Tag385EnuMsgDirection(oneEnum);
             assertEquals( "Tag385EnuMsgDirection\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

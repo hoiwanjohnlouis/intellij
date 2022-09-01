@@ -40,11 +40,11 @@ class Tag277EnuTradeConditionTest {
         for ( Enum277TradeCondition oneEnum : Enum277TradeCondition.values()) {
             tagData = new Tag277EnuTradeCondition(oneEnum);
             assertEquals( "FIX277_ENU_TRADE_CONDITION", tagData.toFIXLabelString());
-            assertEquals( "277", tagData.toEnumIDString());
+            assertEquals( "277", tagData.toFIXIDString());
             assertEquals( "TRADE_CONDITION", tagData.toEnumNameString());
             assertEquals( "TradeCondition", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag277EnuTradeConditionTest {
         // loop around the ENUM and process
         for ( Enum277TradeCondition oneEnum : Enum277TradeCondition.values()) {
             tagData = new Tag277EnuTradeCondition(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -423,7 +423,7 @@ class Tag277EnuTradeConditionTest {
             tagData = new Tag277EnuTradeCondition(oneEnum);
             assertEquals( "Tag277EnuTradeCondition\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

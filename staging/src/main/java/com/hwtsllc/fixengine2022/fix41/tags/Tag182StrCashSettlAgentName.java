@@ -48,7 +48,7 @@ public class Tag182StrCashSettlAgentName extends FIX41Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

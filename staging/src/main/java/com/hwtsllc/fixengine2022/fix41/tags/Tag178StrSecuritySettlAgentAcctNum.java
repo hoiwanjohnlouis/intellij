@@ -48,7 +48,7 @@ public class Tag178StrSecuritySettlAgentAcctNum extends FIX41Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

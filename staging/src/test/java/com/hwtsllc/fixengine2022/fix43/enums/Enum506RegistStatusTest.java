@@ -47,39 +47,39 @@ class Enum506RegistStatusTest {
          * A, R, H, and N types
          */
         enumType = Enum506RegistStatus.ACCEPTED;
-        assertEquals("A", enumType.toEnumIDString());
+        assertEquals("A", enumType.toFIXIDString());
         assertEquals("ACCEPTED", enumType.toEnumNameString());
         assertEquals("A - Accepted", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum506RegistStatus.REJECTED;
-        assertEquals("R", enumType.toEnumIDString());
+        assertEquals("R", enumType.toFIXIDString());
         assertEquals("REJECTED", enumType.toEnumNameString());
         assertEquals("R - Rejected", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum506RegistStatus.HELD;
-        assertEquals("H", enumType.toEnumIDString());
+        assertEquals("H", enumType.toFIXIDString());
         assertEquals("HELD", enumType.toEnumNameString());
         assertEquals("H - Held", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum506RegistStatus.REMINDER;
-        assertEquals("N", enumType.toEnumIDString());
+        assertEquals("N", enumType.toFIXIDString());
         assertEquals("REMINDER", enumType.toEnumNameString());
         assertEquals("N - Reminder - i.e. Registration Instructions are still outstanding",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

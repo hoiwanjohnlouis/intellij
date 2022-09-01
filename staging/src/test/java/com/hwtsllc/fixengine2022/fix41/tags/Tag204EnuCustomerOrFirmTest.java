@@ -41,11 +41,11 @@ class Tag204EnuCustomerOrFirmTest {
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
             assertEquals( "FIX204_ENU_CUSTOMER_OR_FIRM", tagData.toFIXLabelString());
-            assertEquals( "204", tagData.toEnumIDString());
+            assertEquals( "204", tagData.toFIXIDString());
             assertEquals( "CUSTOMER_OR_FIRM", tagData.toEnumNameString());
             assertEquals( "CustomerOrFirm (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -55,9 +55,9 @@ class Tag204EnuCustomerOrFirmTest {
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -93,7 +93,7 @@ class Tag204EnuCustomerOrFirmTest {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
             assertEquals( "Tag204EnuCustomerOrFirm\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

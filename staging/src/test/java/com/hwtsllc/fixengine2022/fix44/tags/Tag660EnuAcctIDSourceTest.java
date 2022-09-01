@@ -40,11 +40,11 @@ class Tag660EnuAcctIDSourceTest {
         for (MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
             tagData = new Tag660EnuAcctIDSource(oneEnum);
             assertEquals( "FIX660_ENU_ACCT_ID_SOURCE", tagData.toFIXLabelString());
-            assertEquals( "660", tagData.toEnumIDString());
+            assertEquals( "660", tagData.toFIXIDString());
             assertEquals( "ACCT_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "AcctIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag660EnuAcctIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
             tagData = new Tag660EnuAcctIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -117,7 +117,7 @@ class Tag660EnuAcctIDSourceTest {
             tagData = new Tag660EnuAcctIDSource(oneEnum);
             assertEquals( "Tag660EnuAcctIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

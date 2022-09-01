@@ -47,7 +47,7 @@ public class Tag634PctOfferYield extends FIX43Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

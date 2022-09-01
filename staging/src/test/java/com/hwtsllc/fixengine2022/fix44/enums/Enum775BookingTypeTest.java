@@ -43,26 +43,26 @@ class Enum775BookingTypeTest {
         Enum775BookingType enumType;
 
         enumType = Enum775BookingType.REGULAR_BOOKING;
-        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "REGULAR_BOOKING", enumType.toEnumNameString() );
         assertEquals( "0 - Regular booking", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum775BookingType.CONTRACT_FOR_DIFFERENCE;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "CONTRACT_FOR_DIFFERENCE", enumType.toEnumNameString() );
         assertEquals( "1 - CFD (Contract for difference)", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum775BookingType.TOTAL_RETURN_SWAP;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "TOTAL_RETURN_SWAP", enumType.toEnumNameString() );
         assertEquals( "2 - Total Return Swap", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

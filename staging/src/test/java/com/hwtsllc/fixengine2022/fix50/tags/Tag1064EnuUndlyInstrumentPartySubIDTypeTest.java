@@ -147,12 +147,12 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
         for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(oneEnum);
             assertEquals( "FIX1064_ENU_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", tagData.toFIXLabelString());
-            assertEquals( "1064", tagData.toEnumIDString());
+            assertEquals( "1064", tagData.toFIXIDString());
             assertEquals( "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", tagData.toEnumNameString());
             assertEquals( "UndlyInstrumentPartySubIDType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -161,9 +161,9 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
         // loop around the ENUM and process
         for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -362,7 +362,7 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
             tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(oneEnum);
             assertEquals( "Tag1064EnuUndlyInstrumentPartySubIDType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

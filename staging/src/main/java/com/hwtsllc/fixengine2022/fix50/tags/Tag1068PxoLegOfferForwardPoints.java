@@ -51,7 +51,7 @@ public class Tag1068PxoLegOfferForwardPoints extends FIX50Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

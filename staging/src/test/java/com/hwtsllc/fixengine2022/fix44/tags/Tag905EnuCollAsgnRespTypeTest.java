@@ -40,12 +40,12 @@ class Tag905EnuCollAsgnRespTypeTest {
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
             assertEquals( "FIX905_ENU_COLL_ASGN_RESP_TYPE", tagData.toFIXLabelString());
-            assertEquals( "905", tagData.toEnumIDString());
+            assertEquals( "905", tagData.toFIXIDString());
             assertEquals( "COLL_ASGN_RESP_TYPE", tagData.toEnumNameString());
             assertEquals( "CollAsgnRespType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag905EnuCollAsgnRespTypeTest {
         // loop around the ENUM and process
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -102,7 +102,7 @@ class Tag905EnuCollAsgnRespTypeTest {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
             assertEquals( "Tag905EnuCollAsgnRespType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

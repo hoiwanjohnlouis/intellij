@@ -47,7 +47,7 @@ public class Tag931StrRefSubID extends FIX44Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

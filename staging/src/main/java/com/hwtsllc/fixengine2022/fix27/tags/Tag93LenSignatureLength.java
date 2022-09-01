@@ -47,7 +47,7 @@ public class Tag93LenSignatureLength extends FIX27Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

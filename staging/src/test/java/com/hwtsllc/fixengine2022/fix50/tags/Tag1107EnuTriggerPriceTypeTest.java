@@ -40,12 +40,12 @@ class Tag1107EnuTriggerPriceTypeTest {
         for ( Enum1107TriggerPriceType oneEnum : Enum1107TriggerPriceType.values()) {
             tagData = new Tag1107EnuTriggerPriceType(oneEnum);
             assertEquals( "FIX1107_ENU_TRIGGER_PRICE_TYPE", tagData.toFIXLabelString());
-            assertEquals( "1107", tagData.toEnumIDString());
+            assertEquals( "1107", tagData.toFIXIDString());
             assertEquals( "TRIGGER_PRICE_TYPE", tagData.toEnumNameString());
             assertEquals( "TriggerPriceType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1107EnuTriggerPriceTypeTest {
         // loop around the ENUM and process
         for ( Enum1107TriggerPriceType oneEnum : Enum1107TriggerPriceType.values()) {
             tagData = new Tag1107EnuTriggerPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -114,7 +114,7 @@ class Tag1107EnuTriggerPriceTypeTest {
             tagData = new Tag1107EnuTriggerPriceType(oneEnum);
             assertEquals( "Tag1107EnuTriggerPriceType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

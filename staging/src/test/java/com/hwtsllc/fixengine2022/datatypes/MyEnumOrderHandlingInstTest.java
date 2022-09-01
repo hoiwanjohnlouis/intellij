@@ -79,198 +79,198 @@ class MyEnumOrderHandlingInstTest {
         MyEnumOrderHandlingInst enumType;
 
         enumType = MyEnumOrderHandlingInst.ADD_ON_ORDER;
-        assertEquals( "ADD", enumType.toEnumIDString() );
+        assertEquals( "ADD", enumType.toFIXIDString() );
         assertEquals( "ADD_ON_ORDER", enumType.toEnumNameString() );
         assertEquals( "ADD - Add On Order", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.ALL_OR_NONE;
-        assertEquals( "AON", enumType.toEnumIDString() );
+        assertEquals( "AON", enumType.toFIXIDString() );
         assertEquals( "ALL_OR_NONE", enumType.toEnumNameString() );
         assertEquals( "AON - All Or None", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.CASH_NOT_HELD;
-        assertEquals( "CNH", enumType.toEnumIDString() );
+        assertEquals( "CNH", enumType.toFIXIDString() );
         assertEquals( "CASH_NOT_HELD", enumType.toEnumNameString() );
         assertEquals( "CNH - Cash Not Held", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.DIRECTED_ORDER;
-        assertEquals( "DIR", enumType.toEnumIDString() );
+        assertEquals( "DIR", enumType.toFIXIDString() );
         assertEquals( "DIRECTED_ORDER", enumType.toEnumNameString() );
         assertEquals( "DIR - Directed Order", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.EXCHANGE_FOR_PHYSICAL;
-        assertEquals( "E.W", enumType.toEnumIDString() );
+        assertEquals( "E.W", enumType.toFIXIDString() );
         assertEquals( "EXCHANGE_FOR_PHYSICAL", enumType.toEnumNameString() );
         assertEquals( "E.W - Exchange for Physical Transaction", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
 
         enumType = MyEnumOrderHandlingInst.FILL_OR_KILL;
-        assertEquals( "FOK", enumType.toEnumIDString() );
+        assertEquals( "FOK", enumType.toFIXIDString() );
         assertEquals( "FILL_OR_KILL", enumType.toEnumNameString() );
         assertEquals( "FOK - Fill Or Kill", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.IMBALANCE_ONLY;
-        assertEquals( "IO", enumType.toEnumIDString() );
+        assertEquals( "IO", enumType.toFIXIDString() );
         assertEquals( "IMBALANCE_ONLY", enumType.toEnumNameString() );
         assertEquals( "IO - Imbalance Only", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.IMMEDIATE_OR_CANCEL;
-        assertEquals( "IOC", enumType.toEnumIDString() );
+        assertEquals( "IOC", enumType.toFIXIDString() );
         assertEquals( "IMMEDIATE_OR_CANCEL", enumType.toEnumNameString() );
         assertEquals( "IOC - Immediate Or Cancel", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.LIMIT_ON_OPEN;
-        assertEquals( "LOO", enumType.toEnumIDString() );
+        assertEquals( "LOO", enumType.toFIXIDString() );
         assertEquals( "LIMIT_ON_OPEN", enumType.toEnumNameString() );
         assertEquals( "LOO - Limit On Open", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.LIMIT_ON_CLOSE;
-        assertEquals( "LOC", enumType.toEnumIDString() );
+        assertEquals( "LOC", enumType.toFIXIDString() );
         assertEquals( "LIMIT_ON_CLOSE", enumType.toEnumNameString() );
         assertEquals( "LOC - Limit On Close", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
 
         enumType = MyEnumOrderHandlingInst.MARKET_AT_OPEN;
-        assertEquals( "MAO", enumType.toEnumIDString() );
+        assertEquals( "MAO", enumType.toFIXIDString() );
         assertEquals( "MARKET_AT_OPEN", enumType.toEnumNameString() );
         assertEquals( "MAO - Market At Open", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.MARKET_AT_CLOSE;
-        assertEquals( "MAC", enumType.toEnumIDString() );
+        assertEquals( "MAC", enumType.toFIXIDString() );
         assertEquals( "MARKET_AT_CLOSE", enumType.toEnumNameString() );
         assertEquals( "MAC - Market At Close", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.MARKET_ON_OPEN;
-        assertEquals( "MOO", enumType.toEnumIDString() );
+        assertEquals( "MOO", enumType.toFIXIDString() );
         assertEquals( "MARKET_ON_OPEN", enumType.toEnumNameString() );
         assertEquals( "MOO - Market On Open", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.MARKET_ON_CLOSE;
-        assertEquals( "MOC", enumType.toEnumIDString() );
+        assertEquals( "MOC", enumType.toFIXIDString() );
         assertEquals( "MARKET_ON_CLOSE", enumType.toEnumNameString() );
         assertEquals( "MOC - Market On Close", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.MINIMUM_QUANTITY;
-        assertEquals( "MQT", enumType.toEnumIDString() );
+        assertEquals( "MQT", enumType.toFIXIDString() );
         assertEquals( "MINIMUM_QUANTITY", enumType.toEnumNameString() );
         assertEquals( "MQT - Minimum Quantity", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
 
         enumType = MyEnumOrderHandlingInst.NOT_HELD;
-        assertEquals( "NH", enumType.toEnumIDString() );
+        assertEquals( "NH", enumType.toFIXIDString() );
         assertEquals( "NOT_HELD", enumType.toEnumNameString() );
         assertEquals( "NH - Not Held", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.OVER_THE_DAY;
-        assertEquals( "OVD", enumType.toEnumIDString() );
+        assertEquals( "OVD", enumType.toFIXIDString() );
         assertEquals( "OVER_THE_DAY", enumType.toEnumNameString() );
         assertEquals( "OVD - Over the Day", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.PEGGED;
-        assertEquals( "PEG", enumType.toEnumIDString() );
+        assertEquals( "PEG", enumType.toFIXIDString() );
         assertEquals( "PEGGED", enumType.toEnumNameString() );
         assertEquals( "PEG - Pegged", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.RESERVE_SIZE_ORDER;
-        assertEquals( "RSV", enumType.toEnumIDString() );
+        assertEquals( "RSV", enumType.toFIXIDString() );
         assertEquals( "RESERVE_SIZE_ORDER", enumType.toEnumNameString() );
         assertEquals( "RSV - Reserve Size Order", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.STOP_STOCK_TRANSACTION;
-        assertEquals( "S.W", enumType.toEnumIDString() );
+        assertEquals( "S.W", enumType.toFIXIDString() );
         assertEquals( "STOP_STOCK_TRANSACTION", enumType.toEnumNameString() );
         assertEquals( "S.W - Stop Stock Transaction", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
 
         enumType = MyEnumOrderHandlingInst.SCALE;
-        assertEquals( "SCL", enumType.toEnumIDString() );
+        assertEquals( "SCL", enumType.toFIXIDString() );
         assertEquals( "SCALE", enumType.toEnumNameString() );
         assertEquals( "SCL - Scale", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.TIME_ORDER;
-        assertEquals( "TMO", enumType.toEnumIDString() );
+        assertEquals( "TMO", enumType.toFIXIDString() );
         assertEquals( "TIME_ORDER", enumType.toEnumNameString() );
         assertEquals( "TMO - Time Order", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.TRAILING_STOP;
-        assertEquals( "TS", enumType.toEnumIDString() );
+        assertEquals( "TS", enumType.toFIXIDString() );
         assertEquals( "TRAILING_STOP", enumType.toEnumNameString() );
         assertEquals( "TS - Trailing Stop", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
 
         enumType = MyEnumOrderHandlingInst.WORK;
-        assertEquals( "WRK", enumType.toEnumIDString() );
+        assertEquals( "WRK", enumType.toFIXIDString() );
         assertEquals( "WORK", enumType.toEnumNameString() );
         assertEquals( "WRK - Work", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString() );
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString() );
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString() );
     }

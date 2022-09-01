@@ -139,7 +139,7 @@ public enum FIX40 implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific ID code for this enum. eg: the first field
      */
     @Override
-    public String toEnumIDString() {
+    public String toFIXIDString() {
         return id;
     }
     /**
@@ -163,7 +163,7 @@ public enum FIX40 implements LogFIXString, LogVerboseString {
                 .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
-                .concat( toEnumIDString())
+                .concat( toFIXIDString())
                 .concat("]")
                 .concat("\n\tFIXName[")
                 .concat( toEnumNameString())
@@ -176,7 +176,7 @@ public enum FIX40 implements LogFIXString, LogVerboseString {
     public String toString() {
         return toFIXLabelString()
                 .concat("=[")
-                .concat( toEnumIDString())
+                .concat( toFIXIDString())
                 .concat(",")
                 .concat( toEnumNameString())
                 .concat(",")

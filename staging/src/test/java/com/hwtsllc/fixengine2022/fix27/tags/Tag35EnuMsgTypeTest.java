@@ -41,11 +41,11 @@ class Tag35EnuMsgTypeTest {
             tagData = new Tag35EnuMsgType(oneEnum);
             assertEquals( "FIX35_ENU_MSG_TYPE", tagData.toFIXLabelString());
             assertEquals( "MSG_TYPE", tagData.toEnumNameString());
-            assertEquals( "35", tagData.toEnumIDString());
+            assertEquals( "35", tagData.toFIXIDString());
             assertEquals( "MsgType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag35EnuMsgTypeTest {
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -389,7 +389,7 @@ class Tag35EnuMsgTypeTest {
          *  <p>    "z - Derivative Security List Request"
          */
         tagData = new Tag35EnuMsgType(MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST);
-        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST.toEnumIDString(), tagData.toString());
+        assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST.toFIXIDString(), tagData.toString());
         assertEquals( "z", tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
@@ -638,7 +638,7 @@ class Tag35EnuMsgTypeTest {
             tagData = new Tag35EnuMsgType(oneEnum);
             assertEquals( "Tag35EnuMsgType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

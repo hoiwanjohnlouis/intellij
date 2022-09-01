@@ -49,85 +49,85 @@ class Enum794AllocReportTypeTest {
         Enum794AllocReportType enumType;
 
         enumType = Enum794AllocReportType.PRELIMINARY_REQUEST;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "PRELIMINARY_REQUEST", enumType.toEnumNameString());
         assertEquals( "2 - Preliminary Request to Intermediary", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY;
-        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "SELLSIDE_USING_PRELIMINARY", enumType.toEnumNameString());
         assertEquals( "3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.SELLSIDE_WITHOUT_PRELIMINARY;
-        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "SELLSIDE_WITHOUT_PRELIMINARY", enumType.toEnumNameString());
         assertEquals( "4 - Sellside Calculated Without Preliminary " +
                         "(sent unsolicited by sellside, includes MiscFees and NetMoney)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.WAREHOUSE_RECAP;
-        assertEquals( "5", enumType.toEnumIDString());
+        assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "WAREHOUSE_RECAP", enumType.toEnumNameString());
         assertEquals( "5 - Warehouse Recap", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.REQUEST_TO_INTERMEDIARY;
-        assertEquals( "8", enumType.toEnumIDString());
+        assertEquals( "8", enumType.toFIXIDString());
         assertEquals( "REQUEST_TO_INTERMEDIARY", enumType.toEnumNameString());
         assertEquals( "8 - Request to Intermediary", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.ACCEPT;
-        assertEquals( "9", enumType.toEnumIDString());
+        assertEquals( "9", enumType.toFIXIDString());
         assertEquals( "ACCEPT", enumType.toEnumNameString());
         assertEquals( "9 - Accept", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.REJECT;
-        assertEquals( "10", enumType.toEnumIDString());
+        assertEquals( "10", enumType.toFIXIDString());
         assertEquals( "REJECT", enumType.toEnumNameString());
         assertEquals( "10 - Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.ACCEPT_PENDING;
-        assertEquals( "11", enumType.toEnumIDString());
+        assertEquals( "11", enumType.toFIXIDString());
         assertEquals( "ACCEPT_PENDING", enumType.toEnumNameString());
         assertEquals( "11 - Accept Pending", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.COMPLETE;
-        assertEquals( "12", enumType.toEnumIDString());
+        assertEquals( "12", enumType.toFIXIDString());
         assertEquals( "COMPLETE", enumType.toEnumNameString());
         assertEquals( "12 - Complete", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum794AllocReportType.REVERSE_PENDING;
-        assertEquals( "14", enumType.toEnumIDString());
+        assertEquals( "14", enumType.toFIXIDString());
         assertEquals( "REVERSE_PENDING", enumType.toEnumNameString());
         assertEquals( "14 - Reverse Pending", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

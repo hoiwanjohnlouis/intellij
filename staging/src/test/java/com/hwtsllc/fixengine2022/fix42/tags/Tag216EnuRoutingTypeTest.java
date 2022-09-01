@@ -40,11 +40,11 @@ class Tag216EnuRoutingTypeTest {
         for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
             tagData = new Tag216EnuRoutingType(oneEnum);
             assertEquals( "FIX216_ENU_ROUTING_TYPE", tagData.toFIXLabelString());
-            assertEquals( "216", tagData.toEnumIDString());
+            assertEquals( "216", tagData.toFIXIDString());
             assertEquals( "ROUTING_TYPE", tagData.toEnumNameString());
             assertEquals( "RoutingType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag216EnuRoutingTypeTest {
         // loop around the ENUM and process
         for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
             tagData = new Tag216EnuRoutingType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -102,7 +102,7 @@ class Tag216EnuRoutingTypeTest {
             tagData = new Tag216EnuRoutingType(oneEnum);
             assertEquals( "Tag216EnuRoutingType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

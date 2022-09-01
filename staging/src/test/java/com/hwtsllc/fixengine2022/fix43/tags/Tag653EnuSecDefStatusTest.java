@@ -41,11 +41,11 @@ class Tag653EnuSecDefStatusTest {
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
             assertEquals( "FIX653_ENU_SEC_DEF_STATUS", tagData.toFIXLabelString());
-            assertEquals( "653", tagData.toEnumIDString());
+            assertEquals( "653", tagData.toFIXIDString());
             assertEquals( "SEC_DEF_STATUS", tagData.toEnumNameString());
             assertEquals( "SecDefStatus (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -55,9 +55,9 @@ class Tag653EnuSecDefStatusTest {
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -108,7 +108,7 @@ class Tag653EnuSecDefStatusTest {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
             assertEquals( "Tag653EnuSecDefStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

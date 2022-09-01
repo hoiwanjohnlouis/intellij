@@ -53,7 +53,7 @@ public class Tag967FloStrikeMultiplier extends FIX50Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

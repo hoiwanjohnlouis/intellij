@@ -49,7 +49,7 @@ public class Tag3StrAdvRefID extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

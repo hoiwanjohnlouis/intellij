@@ -47,7 +47,7 @@ public class Tag821StrOrderInputDevice extends FIX44Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -40,12 +40,12 @@ class Tag1084EnuDisplayMethodTest {
         for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
             assertEquals( "FIX1084_ENU_DISPLAY_METHOD", tagData.toFIXLabelString());
-            assertEquals( "1084", tagData.toEnumIDString());
+            assertEquals( "1084", tagData.toFIXIDString());
             assertEquals( "DISPLAY_METHOD", tagData.toEnumNameString());
             assertEquals( "DisplayMethod", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1084EnuDisplayMethodTest {
         // loop around the ENUM and process
         for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -97,7 +97,7 @@ class Tag1084EnuDisplayMethodTest {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
             assertEquals( "Tag1084EnuDisplayMethod\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

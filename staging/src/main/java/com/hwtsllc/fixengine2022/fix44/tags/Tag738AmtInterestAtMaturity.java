@@ -47,7 +47,7 @@ public class Tag738AmtInterestAtMaturity extends FIX44Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

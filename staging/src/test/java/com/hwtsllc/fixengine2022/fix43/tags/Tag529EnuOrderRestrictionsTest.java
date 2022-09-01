@@ -40,11 +40,11 @@ class Tag529EnuOrderRestrictionsTest {
         for (Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
             tagData = new Tag529EnuOrderRestrictions(oneEnum);
             assertEquals( "FIX529_ENU_ORDER_RESTRICTIONS", tagData.toFIXLabelString());
-            assertEquals( "529", tagData.toEnumIDString());
+            assertEquals( "529", tagData.toFIXIDString());
             assertEquals( "ORDER_RESTRICTIONS", tagData.toEnumNameString());
             assertEquals( "OrderRestrictions", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag529EnuOrderRestrictionsTest {
         // loop around the ENUM and process
         for (Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
             tagData = new Tag529EnuOrderRestrictions(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -137,7 +137,7 @@ class Tag529EnuOrderRestrictionsTest {
             tagData = new Tag529EnuOrderRestrictions(oneEnum);
             assertEquals( "Tag529EnuOrderRestrictions\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

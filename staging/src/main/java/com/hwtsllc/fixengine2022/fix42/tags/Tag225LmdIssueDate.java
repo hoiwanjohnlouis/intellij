@@ -54,7 +54,7 @@ public class Tag225LmdIssueDate extends FIX42Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

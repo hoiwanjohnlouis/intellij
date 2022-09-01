@@ -192,83 +192,83 @@ class MyEnumMsgTypeTest {
          *  0-9, msg types
          */
         enumType = MyEnumMsgType.HEARTBEAT;
-        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("0", enumType.toFIXIDString());
         assertEquals("HEARTBEAT", enumType.toEnumNameString());
         assertEquals("0 - Heartbeat", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TEST_REQUEST;
-        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("1", enumType.toFIXIDString());
         assertEquals("TEST_REQUEST", enumType.toEnumNameString());
         assertEquals("1 - Test Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.RESEND_REQUEST;
-        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("2", enumType.toFIXIDString());
         assertEquals("RESEND_REQUEST", enumType.toEnumNameString());
         assertEquals("2 - Resend Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.REJECT;
-        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("3", enumType.toFIXIDString());
         assertEquals("REJECT", enumType.toEnumNameString());
         assertEquals("3 - Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SEQUENCE_RESET;
-        assertEquals("4", enumType.toEnumIDString());
+        assertEquals("4", enumType.toFIXIDString());
         assertEquals("SEQUENCE_RESET", enumType.toEnumNameString());
         assertEquals("4 - Sequence Reset", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.LOGOUT;
-        assertEquals("5", enumType.toEnumIDString());
+        assertEquals("5", enumType.toFIXIDString());
         assertEquals("LOGOUT", enumType.toEnumNameString());
         assertEquals("5 - Logout", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.INDICATION_OF_INTEREST;
-        assertEquals("6", enumType.toEnumIDString());
+        assertEquals("6", enumType.toFIXIDString());
         assertEquals("INDICATION_OF_INTEREST", enumType.toEnumNameString());
         assertEquals("6 - Indication of Interest", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ADVERTISEMENT;
-        assertEquals("7", enumType.toEnumIDString());
+        assertEquals("7", enumType.toFIXIDString());
         assertEquals("ADVERTISEMENT", enumType.toEnumNameString());
         assertEquals("7 - Advertisement", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.EXECUTION_REPORT;
-        assertEquals("8", enumType.toEnumIDString());
+        assertEquals("8", enumType.toFIXIDString());
         assertEquals("EXECUTION_REPORT", enumType.toEnumNameString());
         assertEquals("8 - Execution Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ORDER_CANCEL_REJECT;
-        assertEquals("9", enumType.toEnumIDString());
+        assertEquals("9", enumType.toFIXIDString());
         assertEquals("ORDER_CANCEL_REJECT", enumType.toEnumNameString());
         assertEquals("9 - Order Cancel Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -276,190 +276,190 @@ class MyEnumMsgTypeTest {
          *  A-Z, msg types, skipping "I", and "O"
          */
         enumType = MyEnumMsgType.LOGON;
-        assertEquals("A", enumType.toEnumIDString());
+        assertEquals("A", enumType.toFIXIDString());
         assertEquals("LOGON", enumType.toEnumNameString());
         assertEquals("A - Logon", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NEWS;
-        assertEquals("B", enumType.toEnumIDString());
+        assertEquals("B", enumType.toFIXIDString());
         assertEquals("NEWS", enumType.toEnumNameString());
         assertEquals("B - News", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.EMAIL;
-        assertEquals("C", enumType.toEnumIDString());
+        assertEquals("C", enumType.toFIXIDString());
         assertEquals("EMAIL", enumType.toEnumNameString());
         assertEquals("C - Email", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NEW_ORDER_SINGLE;
-        assertEquals("D", enumType.toEnumIDString());
+        assertEquals("D", enumType.toFIXIDString());
         assertEquals("NEW_ORDER_SINGLE", enumType.toEnumNameString());
         assertEquals("D - New Order - Single", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NEW_ORDER_LIST;
-        assertEquals("E", enumType.toEnumIDString());
+        assertEquals("E", enumType.toFIXIDString());
         assertEquals("NEW_ORDER_LIST", enumType.toEnumNameString());
         assertEquals("E - New Order - List", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.ORDER_CANCEL_REQUEST;
-        assertEquals("F", enumType.toEnumIDString());
+        assertEquals("F", enumType.toFIXIDString());
         assertEquals("ORDER_CANCEL_REQUEST", enumType.toEnumNameString());
         assertEquals("F - Order Cancel Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ORDER_MODIFICATION;
-        assertEquals("G", enumType.toEnumIDString());
+        assertEquals("G", enumType.toFIXIDString());
         assertEquals("ORDER_MODIFICATION", enumType.toEnumNameString());
         assertEquals("G - Order Modification Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ORDER_STATUS_REQUEST;
-        assertEquals("H", enumType.toEnumIDString());
+        assertEquals("H", enumType.toFIXIDString());
         assertEquals("ORDER_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("H - Order Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ALLOCATION_INSTRUCTION;
-        assertEquals("J", enumType.toEnumIDString());
+        assertEquals("J", enumType.toFIXIDString());
         assertEquals("ALLOCATION_INSTRUCTION", enumType.toEnumNameString());
         assertEquals("J - Allocation Instruction", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.LIST_CANCEL_REQUEST;
-        assertEquals("K", enumType.toEnumIDString());
+        assertEquals("K", enumType.toFIXIDString());
         assertEquals("LIST_CANCEL_REQUEST", enumType.toEnumNameString());
         assertEquals("K - List Cancel Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.LIST_EXECUTE;
-        assertEquals("L", enumType.toEnumIDString());
+        assertEquals("L", enumType.toFIXIDString());
         assertEquals("LIST_EXECUTE", enumType.toEnumNameString());
         assertEquals("L - List Execute", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.LIST_STATUS_REQUEST;
-        assertEquals("M", enumType.toEnumIDString());
+        assertEquals("M", enumType.toFIXIDString());
         assertEquals("LIST_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("M - List Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.LIST_STATUS;
-        assertEquals("N", enumType.toEnumIDString());
+        assertEquals("N", enumType.toFIXIDString());
         assertEquals("LIST_STATUS", enumType.toEnumNameString());
         assertEquals("N - List Status", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ALLOCATION_INSTRUCTION_ACK;
-        assertEquals("P", enumType.toEnumIDString());
+        assertEquals("P", enumType.toFIXIDString());
         assertEquals("ALLOCATION_INSTRUCTION_ACK", enumType.toEnumNameString());
         assertEquals("P - Allocation Instruction Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.DONT_KNOW_TRADE;
-        assertEquals("Q", enumType.toEnumIDString());
+        assertEquals("Q", enumType.toFIXIDString());
         assertEquals("DONT_KNOW_TRADE", enumType.toEnumNameString());
         assertEquals("Q - Don't Know Trade (DK)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.QUOTE_REQUEST;
-        assertEquals("R", enumType.toEnumIDString());
+        assertEquals("R", enumType.toFIXIDString());
         assertEquals("QUOTE_REQUEST", enumType.toEnumNameString());
         assertEquals("R - Quote Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.QUOTE;
-        assertEquals("S", enumType.toEnumIDString());
+        assertEquals("S", enumType.toFIXIDString());
         assertEquals("QUOTE", enumType.toEnumNameString());
         assertEquals("S - Quote", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SETTLEMENT_INSTRUCTIONS;
-        assertEquals("T", enumType.toEnumIDString());
+        assertEquals("T", enumType.toFIXIDString());
         assertEquals("SETTLEMENT_INSTRUCTIONS", enumType.toEnumNameString());
         assertEquals("T - Settlement Instructions", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MARKET_DATA_REQUEST;
-        assertEquals("V", enumType.toEnumIDString());
+        assertEquals("V", enumType.toFIXIDString());
         assertEquals("MARKET_DATA_REQUEST", enumType.toEnumNameString());
         assertEquals("V - Market Data Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MARKET_DATA_REFRESH;
-        assertEquals("W", enumType.toEnumIDString());
+        assertEquals("W", enumType.toFIXIDString());
         assertEquals("MARKET_DATA_REFRESH", enumType.toEnumNameString());
         assertEquals("W - Market Data - Snapshot/Full Refresh", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.MARKET_DATA_INCREMENTAL_REFRESH;
-        assertEquals("X", enumType.toEnumIDString());
+        assertEquals("X", enumType.toFIXIDString());
         assertEquals("MARKET_DATA_INCREMENTAL_REFRESH", enumType.toEnumNameString());
         assertEquals("X - Market Data - Incremental Refresh", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MARKET_DATA_REQUEST_REJECT;
-        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("Y", enumType.toFIXIDString());
         assertEquals("MARKET_DATA_REQUEST_REJECT", enumType.toEnumNameString());
         assertEquals("Y - Market Data Request Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.QUOTE_CANCEL;
-        assertEquals("Z", enumType.toEnumIDString());
+        assertEquals("Z", enumType.toFIXIDString());
         assertEquals("QUOTE_CANCEL", enumType.toEnumNameString());
         assertEquals("Z - Quote Cancel", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -467,215 +467,215 @@ class MyEnumMsgTypeTest {
          *  a-z, msg types
          */
         enumType = MyEnumMsgType.QUOTE_STATUS_REQUEST;
-        assertEquals("a", enumType.toEnumIDString());
+        assertEquals("a", enumType.toFIXIDString());
         assertEquals("QUOTE_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("a - Quote Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MASS_QUOTE_ACKNOWLEDGEMENT;
-        assertEquals("b", enumType.toEnumIDString());
+        assertEquals("b", enumType.toFIXIDString());
         assertEquals("MASS_QUOTE_ACKNOWLEDGEMENT", enumType.toEnumNameString());
         assertEquals("b - Mass Quote Acknowledgement", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_DEFINITION_REQUEST;
-        assertEquals("c", enumType.toEnumIDString());
+        assertEquals("c", enumType.toFIXIDString());
         assertEquals("SECURITY_DEFINITION_REQUEST", enumType.toEnumNameString());
         assertEquals("c - Security Definition Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_DEFINITION;
-        assertEquals("d", enumType.toEnumIDString());
+        assertEquals("d", enumType.toFIXIDString());
         assertEquals("SECURITY_DEFINITION", enumType.toEnumNameString());
         assertEquals("d - Security Definition", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_STATUS_REQUEST;
-        assertEquals("e", enumType.toEnumIDString());
+        assertEquals("e", enumType.toFIXIDString());
         assertEquals("SECURITY_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("e - Security Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.SECURITY_STATUS;
-        assertEquals("f", enumType.toEnumIDString());
+        assertEquals("f", enumType.toFIXIDString());
         assertEquals("SECURITY_STATUS", enumType.toEnumNameString());
         assertEquals("f - Security Status", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADING_SESSION_STATUS_REQUEST;
-        assertEquals("g", enumType.toEnumIDString());
+        assertEquals("g", enumType.toFIXIDString());
         assertEquals("TRADING_SESSION_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("g - Trading Session Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADING_SESSION_STATUS;
-        assertEquals("h", enumType.toEnumIDString());
+        assertEquals("h", enumType.toFIXIDString());
         assertEquals("TRADING_SESSION_STATUS", enumType.toEnumNameString());
         assertEquals("h - Trading Session Status", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MASS_QUOTE;
-        assertEquals("i", enumType.toEnumIDString());
+        assertEquals("i", enumType.toFIXIDString());
         assertEquals("MASS_QUOTE", enumType.toEnumNameString());
         assertEquals("i - Mass Quote", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.BUSINESS_MESSAGE_REJECT;
-        assertEquals("j", enumType.toEnumIDString());
+        assertEquals("j", enumType.toFIXIDString());
         assertEquals("BUSINESS_MESSAGE_REJECT", enumType.toEnumNameString());
         assertEquals("j - Business Message Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.BID_REQUEST;
-        assertEquals("k", enumType.toEnumIDString());
+        assertEquals("k", enumType.toFIXIDString());
         assertEquals("BID_REQUEST", enumType.toEnumNameString());
         assertEquals("k - Bid Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.BID_RESPONSE;
-        assertEquals("l", enumType.toEnumIDString());
+        assertEquals("l", enumType.toFIXIDString());
         assertEquals("BID_RESPONSE", enumType.toEnumNameString());
         assertEquals("l - Bid Response (lowercase L)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.LIST_STRIKE_PRICE;
-        assertEquals("m", enumType.toEnumIDString());
+        assertEquals("m", enumType.toFIXIDString());
         assertEquals("LIST_STRIKE_PRICE", enumType.toEnumNameString());
         assertEquals("m - List Strike Price", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.XML_MESSAGE;
-        assertEquals("n", enumType.toEnumIDString());
+        assertEquals("n", enumType.toFIXIDString());
         assertEquals("XML_MESSAGE", enumType.toEnumNameString());
         assertEquals("n - XML message (e.g. non FIX Msg Type)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.REGISTRATION_INSTRUCTIONS;
-        assertEquals("o", enumType.toEnumIDString());
+        assertEquals("o", enumType.toFIXIDString());
         assertEquals("REGISTRATION_INSTRUCTIONS", enumType.toEnumNameString());
         assertEquals("o - Registration Instructions", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.REGISTRATION_INSTRUCTIONS_RESPONSE;
-        assertEquals("p", enumType.toEnumIDString());
+        assertEquals("p", enumType.toFIXIDString());
         assertEquals("REGISTRATION_INSTRUCTIONS_RESPONSE", enumType.toEnumNameString());
         assertEquals("p - Registration Instructions Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ORDER_MASS_CANCEL_REQUEST;
-        assertEquals("q", enumType.toEnumIDString());
+        assertEquals("q", enumType.toFIXIDString());
         assertEquals("ORDER_MASS_CANCEL_REQUEST", enumType.toEnumNameString());
         assertEquals("q - Order Mass Cancel Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ORDER_MASS_CANCEL_REPORT;
-        assertEquals("r", enumType.toEnumIDString());
+        assertEquals("r", enumType.toFIXIDString());
         assertEquals("ORDER_MASS_CANCEL_REPORT", enumType.toEnumNameString());
         assertEquals("r - Order Mass Cancel Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NEW_ORDER_CROSS;
-        assertEquals("s", enumType.toEnumIDString());
+        assertEquals("s", enumType.toFIXIDString());
         assertEquals("NEW_ORDER_CROSS", enumType.toEnumNameString());
         assertEquals("s - New Order - Cross", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.CROSS_ORDER_MODIFICATION_REQUEST;
-        assertEquals("t", enumType.toEnumIDString());
+        assertEquals("t", enumType.toFIXIDString());
         assertEquals("CROSS_ORDER_MODIFICATION_REQUEST", enumType.toEnumNameString());
         assertEquals("t - Cross Order Modification Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.CROSS_ORDER_CANCEL_REQUEST;
-        assertEquals("u", enumType.toEnumIDString());
+        assertEquals("u", enumType.toFIXIDString());
         assertEquals("CROSS_ORDER_CANCEL_REQUEST", enumType.toEnumNameString());
         assertEquals("u - Cross Order Cancel Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_TYPE_REQUEST;
-        assertEquals("v", enumType.toEnumIDString());
+        assertEquals("v", enumType.toFIXIDString());
         assertEquals("SECURITY_TYPE_REQUEST", enumType.toEnumNameString());
         assertEquals("v - Security Type Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_TYPES;
-        assertEquals("w", enumType.toEnumIDString());
+        assertEquals("w", enumType.toFIXIDString());
         assertEquals("SECURITY_TYPES", enumType.toEnumNameString());
         assertEquals("w - Security Types", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_LIST_REQUEST;
-        assertEquals("x", enumType.toEnumIDString());
+        assertEquals("x", enumType.toFIXIDString());
         assertEquals("SECURITY_LIST_REQUEST", enumType.toEnumNameString());
         assertEquals("x - Security List Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SECURITY_LIST;
-        assertEquals("y", enumType.toEnumIDString());
+        assertEquals("y", enumType.toFIXIDString());
         assertEquals("SECURITY_LIST", enumType.toEnumNameString());
         assertEquals("y - Security List", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST;
-        assertEquals("z", enumType.toEnumIDString());
+        assertEquals("z", enumType.toFIXIDString());
         assertEquals("DERIVATIVE_SECURITY_LIST_REQUEST", enumType.toEnumNameString());
         assertEquals("z - Derivative Security List Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -683,215 +683,215 @@ class MyEnumMsgTypeTest {
          *  AA-AZ, msg types
          */
         enumType = MyEnumMsgType.DERIVATIVE_SECURITY_LIST;
-        assertEquals("AA", enumType.toEnumIDString());
+        assertEquals("AA", enumType.toFIXIDString());
         assertEquals("DERIVATIVE_SECURITY_LIST", enumType.toEnumNameString());
         assertEquals("AA - Derivative Security List", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NEW_ORDER_MULTILEG;
-        assertEquals("AB", enumType.toEnumIDString());
+        assertEquals("AB", enumType.toFIXIDString());
         assertEquals("NEW_ORDER_MULTILEG", enumType.toEnumNameString());
         assertEquals("AB - New Order - Multileg", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.MULTILEG_ORDER_MODIFICATION_REQUEST;
-        assertEquals("AC", enumType.toEnumIDString());
+        assertEquals("AC", enumType.toFIXIDString());
         assertEquals("MULTILEG_ORDER_MODIFICATION_REQUEST", enumType.toEnumNameString());
         assertEquals("AC - Multileg Order Modification Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST;
-        assertEquals("AD", enumType.toEnumIDString());
+        assertEquals("AD", enumType.toFIXIDString());
         assertEquals("TRADE_CAPTURE_REPORT_REQUEST", enumType.toEnumNameString());
         assertEquals("AD - Trade Capture Report Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADE_CAPTURE_REPORT;
-        assertEquals("AE", enumType.toEnumIDString());
+        assertEquals("AE", enumType.toFIXIDString());
         assertEquals("TRADE_CAPTURE_REPORT", enumType.toEnumNameString());
         assertEquals("AE - Trade Capture Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.ORDER_MASS_STATUS_REQUEST;
-        assertEquals("AF", enumType.toEnumIDString());
+        assertEquals("AF", enumType.toFIXIDString());
         assertEquals("ORDER_MASS_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("AF - Order Mass Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.QUOTE_REQUEST_REJECT;
-        assertEquals("AG", enumType.toEnumIDString());
+        assertEquals("AG", enumType.toFIXIDString());
         assertEquals("QUOTE_REQUEST_REJECT", enumType.toEnumNameString());
         assertEquals("AG - Quote Request Reject", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.RFQ_REQUEST;
-        assertEquals("AH", enumType.toEnumIDString());
+        assertEquals("AH", enumType.toFIXIDString());
         assertEquals("RFQ_REQUEST", enumType.toEnumNameString());
         assertEquals("AH - RFQ Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.QUOTE_STATUS_REPORT;
-        assertEquals("AI", enumType.toEnumIDString());
+        assertEquals("AI", enumType.toFIXIDString());
         assertEquals("QUOTE_STATUS_REPORT", enumType.toEnumNameString());
         assertEquals("AI - Quote Status Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.QUOTE_RESPONSE;
-        assertEquals("AJ", enumType.toEnumIDString());
+        assertEquals("AJ", enumType.toFIXIDString());
         assertEquals("QUOTE_RESPONSE", enumType.toEnumNameString());
         assertEquals("AJ - Quote Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.CONFIRMATION;
-        assertEquals("AK", enumType.toEnumIDString());
+        assertEquals("AK", enumType.toFIXIDString());
         assertEquals("CONFIRMATION", enumType.toEnumNameString());
         assertEquals("AK - Confirmation", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.POSITION_MAINTENANCE_REQUEST;
-        assertEquals("AL", enumType.toEnumIDString());
+        assertEquals("AL", enumType.toFIXIDString());
         assertEquals("POSITION_MAINTENANCE_REQUEST", enumType.toEnumNameString());
         assertEquals("AL - Position Maintenance Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.POSITION_MAINTENANCE_REPORT;
-        assertEquals("AM", enumType.toEnumIDString());
+        assertEquals("AM", enumType.toFIXIDString());
         assertEquals("POSITION_MAINTENANCE_REPORT", enumType.toEnumNameString());
         assertEquals("AM - Position Maintenance Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.REQUEST_FOR_POSITIONS;
-        assertEquals("AN", enumType.toEnumIDString());
+        assertEquals("AN", enumType.toFIXIDString());
         assertEquals("REQUEST_FOR_POSITIONS", enumType.toEnumNameString());
         assertEquals("AN - Request For Positions", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.REQUEST_FOR_POSITIONS_ACK;
-        assertEquals("AO", enumType.toEnumIDString());
+        assertEquals("AO", enumType.toFIXIDString());
         assertEquals("REQUEST_FOR_POSITIONS_ACK", enumType.toEnumNameString());
         assertEquals("AO - Request For Positions Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.POSITION_REPORT;
-        assertEquals("AP", enumType.toEnumIDString());
+        assertEquals("AP", enumType.toFIXIDString());
         assertEquals("POSITION_REPORT", enumType.toEnumNameString());
         assertEquals("AP - Position Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADE_CAPTURE_REPORT_REQUEST_ACK;
-        assertEquals("AQ", enumType.toEnumIDString());
+        assertEquals("AQ", enumType.toFIXIDString());
         assertEquals("TRADE_CAPTURE_REPORT_REQUEST_ACK", enumType.toEnumNameString());
         assertEquals("AQ - Trade Capture Report Request Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADE_CAPTURE_REPORT_ACK;
-        assertEquals("AR", enumType.toEnumIDString());
+        assertEquals("AR", enumType.toFIXIDString());
         assertEquals("TRADE_CAPTURE_REPORT_ACK", enumType.toEnumNameString());
         assertEquals("AR - Trade Capture Report Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ALLOCATION_CLAIM;
-        assertEquals("AS", enumType.toEnumIDString());
+        assertEquals("AS", enumType.toFIXIDString());
         assertEquals("ALLOCATION_CLAIM", enumType.toEnumNameString());
         assertEquals("AS - Allocation Claim", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ALLOCATION_CLAIM_ACK;
-        assertEquals("AT", enumType.toEnumIDString());
+        assertEquals("AT", enumType.toFIXIDString());
         assertEquals("ALLOCATION_CLAIM_ACK", enumType.toEnumNameString());
         assertEquals("AT - Allocation Claim Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.AFFIRMATION;
-        assertEquals("AU", enumType.toEnumIDString());
+        assertEquals("AU", enumType.toFIXIDString());
         assertEquals("AFFIRMATION", enumType.toEnumNameString());
         assertEquals("AU - Affirmation", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.SETTLEMENT_INSTRUCTION_REQUEST;
-        assertEquals("AV", enumType.toEnumIDString());
+        assertEquals("AV", enumType.toFIXIDString());
         assertEquals("SETTLEMENT_INSTRUCTION_REQUEST", enumType.toEnumNameString());
         assertEquals("AV - Settlement Instruction Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ASSIGNMENT_REPORT;
-        assertEquals("AW", enumType.toEnumIDString());
+        assertEquals("AW", enumType.toFIXIDString());
         assertEquals("ASSIGNMENT_REPORT", enumType.toEnumNameString());
         assertEquals("AW - Assignment Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.COLLATERAL_REQUEST;
-        assertEquals("AX", enumType.toEnumIDString());
+        assertEquals("AX", enumType.toFIXIDString());
         assertEquals("COLLATERAL_REQUEST", enumType.toEnumNameString());
         assertEquals("AX - Collateral Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.COLLATERAL_ASSIGNMENT;
-        assertEquals("AY", enumType.toEnumIDString());
+        assertEquals("AY", enumType.toFIXIDString());
         assertEquals("COLLATERAL_ASSIGNMENT", enumType.toEnumNameString());
         assertEquals("AY - Collateral Assignment", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.COLLATERAL_RESPONSE;
-        assertEquals("AZ", enumType.toEnumIDString());
+        assertEquals("AZ", enumType.toFIXIDString());
         assertEquals("COLLATERAL_RESPONSE", enumType.toEnumNameString());
         assertEquals("AZ - Collateral Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -899,133 +899,133 @@ class MyEnumMsgTypeTest {
          *  BA-BP, msg types
          */
         enumType = MyEnumMsgType.COLLATERAL_REPORT;
-        assertEquals("BA", enumType.toEnumIDString());
+        assertEquals("BA", enumType.toFIXIDString());
         assertEquals("COLLATERAL_REPORT", enumType.toEnumNameString());
         assertEquals("BA - Collateral Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.COLLATERAL_INQUIRY;
-        assertEquals("BB", enumType.toEnumIDString());
+        assertEquals("BB", enumType.toFIXIDString());
         assertEquals("COLLATERAL_INQUIRY", enumType.toEnumNameString());
         assertEquals("BB - Collateral Inquiry", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST;
-        assertEquals("BC", enumType.toEnumIDString());
+        assertEquals("BC", enumType.toFIXIDString());
         assertEquals("NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST", enumType.toEnumNameString());
         assertEquals("BC - Network Counterparty System Status Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE;
-        assertEquals("BD", enumType.toEnumIDString());
+        assertEquals("BD", enumType.toFIXIDString());
         assertEquals("NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE", enumType.toEnumNameString());
         assertEquals("BD - Network Counterparty System Status Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.USER_REQUEST;
-        assertEquals("BE", enumType.toEnumIDString());
+        assertEquals("BE", enumType.toFIXIDString());
         assertEquals("USER_REQUEST", enumType.toEnumNameString());
         assertEquals("BE - User Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.USER_RESPONSE;
-        assertEquals("BF", enumType.toEnumIDString());
+        assertEquals("BF", enumType.toFIXIDString());
         assertEquals("USER_RESPONSE", enumType.toEnumNameString());
         assertEquals("BF - User Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.COLLATERAL_INQUIRY_ACK;
-        assertEquals("BG", enumType.toEnumIDString());
+        assertEquals("BG", enumType.toFIXIDString());
         assertEquals("COLLATERAL_INQUIRY_ACK", enumType.toEnumNameString());
         assertEquals("BG - Collateral Inquiry Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.CONFIRMATION_REQUEST;
-        assertEquals("BH", enumType.toEnumIDString());
+        assertEquals("BH", enumType.toFIXIDString());
         assertEquals("CONFIRMATION_REQUEST", enumType.toEnumNameString());
         assertEquals("BH - Confirmation Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADING_SESSION_LIST_REQUEST;
-        assertEquals("BI", enumType.toEnumIDString());
+        assertEquals("BI", enumType.toFIXIDString());
         assertEquals("TRADING_SESSION_LIST_REQUEST", enumType.toEnumNameString());
         assertEquals("BI - Trading Session List Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.TRADING_SESSION_LIST;
-        assertEquals("BJ", enumType.toEnumIDString());
+        assertEquals("BJ", enumType.toFIXIDString());
         assertEquals("TRADING_SESSION_LIST", enumType.toEnumNameString());
         assertEquals("BJ - Trading Session List", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.SECURITY_LIST_UPDATE_REPORT;
-        assertEquals("BK", enumType.toEnumIDString());
+        assertEquals("BK", enumType.toFIXIDString());
         assertEquals("SECURITY_LIST_UPDATE_REPORT", enumType.toEnumNameString());
         assertEquals("BK - Security List Update Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ADJUSTED_POSITION_REPORT;
-        assertEquals("BL", enumType.toEnumIDString());
+        assertEquals("BL", enumType.toFIXIDString());
         assertEquals("ADJUSTED_POSITION_REPORT", enumType.toEnumNameString());
         assertEquals("BL - Adjusted Position Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.ALLOCATION_INSTRUCTION_ALERT;
-        assertEquals("BM", enumType.toEnumIDString());
+        assertEquals("BM", enumType.toFIXIDString());
         assertEquals("ALLOCATION_INSTRUCTION_ALERT", enumType.toEnumNameString());
         assertEquals("BM - Allocation Instruction Alert", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.EXECUTION_ACKNOWLEDGEMENT;
-        assertEquals("BN", enumType.toEnumIDString());
+        assertEquals("BN", enumType.toFIXIDString());
         assertEquals("EXECUTION_ACKNOWLEDGEMENT", enumType.toEnumNameString());
         assertEquals("BN - Execution Acknowledgement", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumMsgType.CONTRARY_INTENTION_REPORT;
-        assertEquals("BO", enumType.toEnumIDString());
+        assertEquals("BO", enumType.toFIXIDString());
         assertEquals("CONTRARY_INTENTION_REPORT", enumType.toEnumNameString());
         assertEquals("BO - Contrary Intention Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT;
-        assertEquals("BP", enumType.toEnumIDString());
+        assertEquals("BP", enumType.toFIXIDString());
         assertEquals("SECURITY_DEFINITION_UPDATE_REPORT", enumType.toEnumNameString());
         assertEquals("BP - Security Definition Update Report", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

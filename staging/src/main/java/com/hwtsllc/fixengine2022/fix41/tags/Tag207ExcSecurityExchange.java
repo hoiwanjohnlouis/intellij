@@ -50,7 +50,7 @@ public class Tag207ExcSecurityExchange extends FIX41Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

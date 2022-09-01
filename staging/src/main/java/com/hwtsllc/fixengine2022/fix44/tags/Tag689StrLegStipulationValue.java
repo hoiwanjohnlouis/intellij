@@ -49,7 +49,7 @@ public class Tag689StrLegStipulationValue extends FIX44Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

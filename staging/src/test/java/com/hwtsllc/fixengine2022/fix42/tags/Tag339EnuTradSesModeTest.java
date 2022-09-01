@@ -40,11 +40,11 @@ class Tag339EnuTradSesModeTest {
         for ( Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
             tagData = new Tag339EnuTradSesMode(oneEnum);
             assertEquals( "FIX339_ENU_TRAD_SES_MODE", tagData.toFIXLabelString());
-            assertEquals( "339", tagData.toEnumIDString());
+            assertEquals( "339", tagData.toFIXIDString());
             assertEquals( "TRAD_SES_MODE", tagData.toEnumNameString());
             assertEquals( "TradSesMode", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag339EnuTradSesModeTest {
         // loop around the ENUM and process
         for ( Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
             tagData = new Tag339EnuTradSesMode(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -99,7 +99,7 @@ class Tag339EnuTradSesModeTest {
             tagData = new Tag339EnuTradSesMode(oneEnum);
             assertEquals( "Tag339EnuTradSesMode\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -46,67 +46,67 @@ class Enum896CollInquiryQualifierTest {
         Enum896CollInquiryQualifier enumType;
 
         enumType = Enum896CollInquiryQualifier.TRADE_DATE;
-        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "TRADE_DATE", enumType.toEnumNameString() );
         assertEquals( "0 - Trade Date", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.GC_INSTRUMENT;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "GC_INSTRUMENT", enumType.toEnumNameString() );
         assertEquals( "1 - GC Instrument", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.COLLATERAL_INSTRUMENT;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "COLLATERAL_INSTRUMENT", enumType.toEnumNameString() );
         assertEquals( "2 - Collateral Instrument", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.SUBSTITUTION_ELIGIBLE;
-        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "SUBSTITUTION_ELIGIBLE", enumType.toEnumNameString() );
         assertEquals( "3 - Substitution Eligible", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.NOT_ASSIGNED;
-        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "NOT_ASSIGNED", enumType.toEnumNameString() );
         assertEquals( "4 - Not Assigned", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum896CollInquiryQualifier.PARTIALLY_ASSIGNED;
-        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "PARTIALLY_ASSIGNED", enumType.toEnumNameString() );
         assertEquals( "5 - Partially Assigned", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.FULLY_ASSIGNED;
-        assertEquals( "6", enumType.toEnumIDString() );
+        assertEquals( "6", enumType.toFIXIDString() );
         assertEquals( "FULLY_ASSIGNED", enumType.toEnumNameString() );
         assertEquals( "6 - Fully Assigned", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum896CollInquiryQualifier.OUTSTANDING_TRADES;
-        assertEquals( "7", enumType.toEnumIDString() );
+        assertEquals( "7", enumType.toFIXIDString() );
         assertEquals( "OUTSTANDING_TRADES", enumType.toEnumNameString() );
         assertEquals( "7 - Outstanding Trades (Today < end date)", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

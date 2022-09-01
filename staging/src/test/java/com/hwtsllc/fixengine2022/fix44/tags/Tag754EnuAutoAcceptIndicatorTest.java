@@ -40,12 +40,12 @@ class Tag754EnuAutoAcceptIndicatorTest {
         for ( Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
             assertEquals( "FIX754_ENU_AUTO_ACCEPT_INDICATOR", tagData.toFIXLabelString());
-            assertEquals( "754", tagData.toEnumIDString());
+            assertEquals( "754", tagData.toFIXIDString());
             assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toEnumNameString());
             assertEquals( "AutoAcceptIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag754EnuAutoAcceptIndicatorTest {
         // loop around the ENUM and process
         for ( Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -92,7 +92,7 @@ class Tag754EnuAutoAcceptIndicatorTest {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
             assertEquals( "Tag754EnuAutoAcceptIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

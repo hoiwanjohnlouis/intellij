@@ -48,7 +48,7 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

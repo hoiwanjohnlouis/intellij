@@ -49,7 +49,7 @@ public class Tag687QtyLegQty extends FIX44Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

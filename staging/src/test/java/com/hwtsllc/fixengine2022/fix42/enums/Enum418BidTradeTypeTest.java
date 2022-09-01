@@ -46,38 +46,38 @@ class Enum418BidTradeTypeTest {
          * A, G, J, and R msg types
          */
         enumType = Enum418BidTradeType.AGENCY;
-        assertEquals( "A", enumType.toEnumIDString());
+        assertEquals( "A", enumType.toFIXIDString());
         assertEquals( "AGENCY", enumType.toEnumNameString());
         assertEquals( "A - Agency", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum418BidTradeType.VWAP_GUARANTEE;
-        assertEquals( "G", enumType.toEnumIDString());
+        assertEquals( "G", enumType.toFIXIDString());
         assertEquals( "VWAP_GUARANTEE", enumType.toEnumNameString());
         assertEquals( "G - VWAP Guarantee", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum418BidTradeType.GUARANTEED_CLOSE;
-        assertEquals( "J", enumType.toEnumIDString());
+        assertEquals( "J", enumType.toFIXIDString());
         assertEquals( "GUARANTEED_CLOSE", enumType.toEnumNameString());
         assertEquals( "J - Guaranteed Close", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum418BidTradeType.RISK_TRADE;
-        assertEquals( "R", enumType.toEnumIDString());
+        assertEquals( "R", enumType.toFIXIDString());
         assertEquals( "RISK_TRADE", enumType.toEnumNameString());
         assertEquals( "R - Risk Trade", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

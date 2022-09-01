@@ -49,7 +49,7 @@ public class Tag118AmtNetMoney extends FIX40Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -50,7 +50,7 @@ public class Tag180StrSecuritySettlAgentContactName extends FIX41Abstract implem
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

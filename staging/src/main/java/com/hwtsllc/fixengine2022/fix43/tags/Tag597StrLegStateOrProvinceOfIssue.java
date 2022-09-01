@@ -49,7 +49,7 @@ public class Tag597StrLegStateOrProvinceOfIssue extends FIX43Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

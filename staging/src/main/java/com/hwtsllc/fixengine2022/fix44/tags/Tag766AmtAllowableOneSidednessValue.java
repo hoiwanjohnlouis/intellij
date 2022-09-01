@@ -48,7 +48,7 @@ public class Tag766AmtAllowableOneSidednessValue extends FIX44Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -148,7 +148,7 @@ public class Tag786EnuSettlPartySubIDType extends FIX44Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -180,7 +180,7 @@ public class Tag786EnuSettlPartySubIDType extends FIX44Abstract implements LogVa
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

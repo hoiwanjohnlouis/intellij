@@ -49,7 +49,7 @@ public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

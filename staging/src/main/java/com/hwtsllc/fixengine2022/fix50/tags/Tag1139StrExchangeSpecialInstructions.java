@@ -47,7 +47,7 @@ public class Tag1139StrExchangeSpecialInstructions extends FIX50Abstract impleme
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

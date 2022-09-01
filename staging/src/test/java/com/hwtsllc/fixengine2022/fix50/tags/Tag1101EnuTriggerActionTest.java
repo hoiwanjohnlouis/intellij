@@ -40,12 +40,12 @@ class Tag1101EnuTriggerActionTest {
         for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
             assertEquals( "FIX1101_ENU_TRIGGER_ACTION", tagData.toFIXLabelString());
-            assertEquals( "1101", tagData.toEnumIDString());
+            assertEquals( "1101", tagData.toFIXIDString());
             assertEquals( "TRIGGER_ACTION", tagData.toEnumNameString());
             assertEquals( "TriggerAction", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1101EnuTriggerActionTest {
         // loop around the ENUM and process
         for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -97,7 +97,7 @@ class Tag1101EnuTriggerActionTest {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
             assertEquals( "Tag1101EnuTriggerAction\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -40,11 +40,11 @@ class Tag285EnuDeleteReasonTest {
         for ( Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
             tagData = new Tag285EnuDeleteReason(oneEnum);
             assertEquals( "FIX285_ENU_DELETE_REASON", tagData.toFIXLabelString());
-            assertEquals( "285", tagData.toEnumIDString());
+            assertEquals( "285", tagData.toFIXIDString());
             assertEquals( "DELETE_REASON", tagData.toEnumNameString());
             assertEquals( "DeleteReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag285EnuDeleteReasonTest {
         // loop around the ENUM and process
         for ( Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
             tagData = new Tag285EnuDeleteReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -93,7 +93,7 @@ class Tag285EnuDeleteReasonTest {
             tagData = new Tag285EnuDeleteReason(oneEnum);
             assertEquals( "Tag285EnuDeleteReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

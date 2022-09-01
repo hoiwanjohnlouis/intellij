@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.interfaces;
 public interface LogFIXString {
     // concrete definitions are by whom inherits this class
     String toFIXLabelString();
-    String toEnumIDString();
+    String toFIXIDString();
     String toEnumNameString();
     String toEnumDescriptionString();
 }

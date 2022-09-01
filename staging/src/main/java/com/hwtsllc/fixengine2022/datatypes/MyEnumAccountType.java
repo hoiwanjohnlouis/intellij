@@ -82,7 +82,7 @@ public enum MyEnumAccountType implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toEnumIDString() {
+    public String toFIXIDString() {
         return id;
     }
     /**
@@ -109,7 +109,7 @@ public enum MyEnumAccountType implements LogFIXString, LogVerboseString {
                 .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat( toEnumIDString())
+                .concat( toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
                 .concat( toEnumNameString())

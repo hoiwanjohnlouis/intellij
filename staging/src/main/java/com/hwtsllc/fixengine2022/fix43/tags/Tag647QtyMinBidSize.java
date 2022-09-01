@@ -49,7 +49,7 @@ public class Tag647QtyMinBidSize extends FIX43Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

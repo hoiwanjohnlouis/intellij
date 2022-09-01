@@ -56,7 +56,7 @@ public class Tag247LmdUnderlyingRedemptionDate extends FIX42Abstract implements 
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

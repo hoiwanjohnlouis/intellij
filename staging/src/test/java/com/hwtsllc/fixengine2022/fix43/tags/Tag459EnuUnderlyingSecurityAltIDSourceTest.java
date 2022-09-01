@@ -41,11 +41,11 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum);
             assertEquals( "FIX459_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE", tagData.toFIXLabelString());
-            assertEquals( "459", tagData.toEnumIDString());
+            assertEquals( "459", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_SECURITY_ALT_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "UnderlyingSecurityAltIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -55,9 +55,9 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -197,7 +197,7 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
             tagData = new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum);
             assertEquals( "Tag459EnuUnderlyingSecurityAltIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

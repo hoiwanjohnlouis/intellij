@@ -40,11 +40,11 @@ class Tag326EnuSecurityTradingStatusTest {
         for ( Enum326SecurityTradingStatus oneEnum : Enum326SecurityTradingStatus.values()) {
             tagData = new Tag326EnuSecurityTradingStatus(oneEnum);
             assertEquals( "FIX326_ENU_SECURITY_TRADING_STATUS", tagData.toFIXLabelString());
-            assertEquals( "326", tagData.toEnumIDString());
+            assertEquals( "326", tagData.toFIXIDString());
             assertEquals( "SECURITY_TRADING_STATUS", tagData.toEnumNameString());
             assertEquals( "SecurityTradingStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag326EnuSecurityTradingStatusTest {
         // loop around the ENUM and process
         for ( Enum326SecurityTradingStatus oneEnum : Enum326SecurityTradingStatus.values()) {
             tagData = new Tag326EnuSecurityTradingStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -201,7 +201,7 @@ class Tag326EnuSecurityTradingStatusTest {
             tagData = new Tag326EnuSecurityTradingStatus(oneEnum);
             assertEquals( "Tag326EnuSecurityTradingStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

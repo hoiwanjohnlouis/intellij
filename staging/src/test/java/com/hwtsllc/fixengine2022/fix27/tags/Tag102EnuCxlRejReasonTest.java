@@ -41,11 +41,11 @@ class Tag102EnuCxlRejReasonTest {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
             assertEquals( "FIX102_ENU_CXL_REJ_REASON", tagData.toFIXLabelString());
             assertEquals( "CXL_REJ_REASON", tagData.toEnumNameString() );
-            assertEquals( "102", tagData.toEnumIDString() );
+            assertEquals( "102", tagData.toFIXIDString() );
             assertEquals( "CxlRejReason", tagData.toEnumDescriptionString() );
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag102EnuCxlRejReasonTest {
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -136,7 +136,7 @@ class Tag102EnuCxlRejReasonTest {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
             assertEquals( "Tag102EnuCxlRejReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

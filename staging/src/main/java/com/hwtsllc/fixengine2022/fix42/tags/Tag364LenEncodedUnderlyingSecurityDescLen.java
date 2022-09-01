@@ -47,7 +47,7 @@ public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract imp
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

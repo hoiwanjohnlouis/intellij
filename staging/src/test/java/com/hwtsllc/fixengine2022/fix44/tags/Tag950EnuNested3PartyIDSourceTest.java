@@ -144,12 +144,12 @@ class Tag950EnuNested3PartyIDSourceTest {
         for ( MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag950EnuNested3PartyIDSource(oneEnum);
             assertEquals( "FIX950_ENU_NESTED_3_PARTY_ID_SOURCE", tagData.toFIXLabelString());
-            assertEquals( "950", tagData.toEnumIDString());
+            assertEquals( "950", tagData.toFIXIDString());
             assertEquals( "NESTED_3_PARTY_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "Nested3PartyIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -158,9 +158,9 @@ class Tag950EnuNested3PartyIDSourceTest {
         // loop around the ENUM and process
         for ( MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag950EnuNested3PartyIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -295,7 +295,7 @@ class Tag950EnuNested3PartyIDSourceTest {
             tagData = new Tag950EnuNested3PartyIDSource(oneEnum);
             assertEquals( "Tag950EnuNested3PartyIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

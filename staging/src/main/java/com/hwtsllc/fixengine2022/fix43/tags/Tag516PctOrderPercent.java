@@ -54,7 +54,7 @@ public class Tag516PctOrderPercent extends FIX43Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -53,7 +53,7 @@ public class Tag1090IntMaxPriceLevels extends FIX50Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

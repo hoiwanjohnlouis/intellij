@@ -59,59 +59,59 @@ class MyEnumTimeUnitTest {
         MyEnumTimeUnit enumType;
 
         enumType = MyEnumTimeUnit.HH;
-        assertEquals( "H", enumType.toEnumIDString() );
+        assertEquals( "H", enumType.toFIXIDString() );
         assertEquals( "HH", enumType.toEnumNameString() );
         assertEquals( "H - Hour", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTimeUnit.MM;
-        assertEquals( "Min", enumType.toEnumIDString() );
+        assertEquals( "Min", enumType.toFIXIDString() );
         assertEquals( "MM", enumType.toEnumNameString() );
         assertEquals( "Min - Minute", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTimeUnit.SS;
-        assertEquals( "S", enumType.toEnumIDString() );
+        assertEquals( "S", enumType.toFIXIDString() );
         assertEquals( "SS", enumType.toEnumNameString() );
         assertEquals( "S - Second", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = MyEnumTimeUnit.DD;
-        assertEquals( "D", enumType.toEnumIDString() );
+        assertEquals( "D", enumType.toFIXIDString() );
         assertEquals( "DD", enumType.toEnumNameString() );
         assertEquals( "D - Day", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTimeUnit.WK;
-        assertEquals( "Wk", enumType.toEnumIDString() );
+        assertEquals( "Wk", enumType.toFIXIDString() );
         assertEquals( "WK", enumType.toEnumNameString() );
         assertEquals( "Wk - Week", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTimeUnit.MO;
-        assertEquals( "Mo", enumType.toEnumIDString() );
+        assertEquals( "Mo", enumType.toFIXIDString() );
         assertEquals( "MO", enumType.toEnumNameString() );
         assertEquals( "Mo - Month", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTimeUnit.YR;
-        assertEquals( "Yr", enumType.toEnumIDString() );
+        assertEquals( "Yr", enumType.toFIXIDString() );
         assertEquals( "YR", enumType.toEnumNameString() );
         assertEquals( "Yr - Year", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

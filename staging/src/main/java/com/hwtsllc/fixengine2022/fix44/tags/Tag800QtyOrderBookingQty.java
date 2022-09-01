@@ -48,7 +48,7 @@ public class Tag800QtyOrderBookingQty extends FIX44Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

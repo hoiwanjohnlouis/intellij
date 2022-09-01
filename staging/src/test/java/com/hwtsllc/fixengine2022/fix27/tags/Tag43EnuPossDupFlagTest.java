@@ -41,11 +41,11 @@ class Tag43EnuPossDupFlagTest {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
             assertEquals( "FIX43_ENU_POSS_DUP_FLAG", tagData.toFIXLabelString());
             assertEquals( "POSS_DUP_FLAG", tagData.toEnumNameString());
-            assertEquals( "43", tagData.toEnumIDString());
+            assertEquals( "43", tagData.toFIXIDString());
             assertEquals( "PossDupFlag", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag43EnuPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -90,7 +90,7 @@ class Tag43EnuPossDupFlagTest {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
             assertEquals( "Tag43EnuPossDupFlag\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

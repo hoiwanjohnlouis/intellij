@@ -47,7 +47,7 @@ public class Tag973AmtUnderlyingCashAmount extends FIX50Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

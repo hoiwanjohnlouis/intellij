@@ -59,7 +59,7 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -91,7 +91,7 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toEnumIDString();
+        return this.dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

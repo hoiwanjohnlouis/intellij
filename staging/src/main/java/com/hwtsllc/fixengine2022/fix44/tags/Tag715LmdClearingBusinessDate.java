@@ -47,7 +47,7 @@ public class Tag715LmdClearingBusinessDate extends FIX44Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

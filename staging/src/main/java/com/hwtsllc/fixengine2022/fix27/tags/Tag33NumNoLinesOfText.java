@@ -47,7 +47,7 @@ public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

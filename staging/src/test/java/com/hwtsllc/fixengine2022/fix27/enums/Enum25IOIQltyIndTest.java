@@ -43,26 +43,26 @@ class Enum25IOIQltyIndTest {
          * H, L, and M types
          */
         enumType = Enum25IOIQltyInd.HIGH;
-        assertEquals("H", enumType.toEnumIDString());
+        assertEquals("H", enumType.toFIXIDString());
         assertEquals("HIGH", enumType.toEnumNameString());
         assertEquals("H - High", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum25IOIQltyInd.LOW;
-        assertEquals("L", enumType.toEnumIDString());
+        assertEquals("L", enumType.toFIXIDString());
         assertEquals("LOW", enumType.toEnumNameString());
         assertEquals("L - Low", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum25IOIQltyInd.MEDIUM;
-        assertEquals("M", enumType.toEnumIDString());
+        assertEquals("M", enumType.toFIXIDString());
         assertEquals("MEDIUM", enumType.toEnumNameString());
         assertEquals("M - Medium", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

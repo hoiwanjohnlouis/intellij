@@ -50,7 +50,7 @@ public class Tag365DatEncodedUnderlyingSecurityDesc extends FIX42Abstract implem
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

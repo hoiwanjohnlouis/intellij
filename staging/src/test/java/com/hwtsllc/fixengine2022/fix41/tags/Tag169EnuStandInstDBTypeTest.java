@@ -54,11 +54,11 @@ class Tag169EnuStandInstDBTypeTest {
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
             assertEquals( "FIX169_ENU_STAND_INST_DB_TYPE", tagData.toFIXLabelString());
-            assertEquals( "169", tagData.toEnumIDString());
+            assertEquals( "169", tagData.toFIXIDString());
             assertEquals( "STAND_INST_DB_TYPE", tagData.toEnumNameString());
             assertEquals( "StandInstDbType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -68,9 +68,9 @@ class Tag169EnuStandInstDBTypeTest {
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -121,7 +121,7 @@ class Tag169EnuStandInstDBTypeTest {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
             assertEquals( "Tag169EnuStandInstDBType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

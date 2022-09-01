@@ -40,12 +40,12 @@ class Tag895EnuCollAsgnReasonTest {
         for ( Enum895CollAsgnReason oneEnum : Enum895CollAsgnReason.values()) {
             tagData = new Tag895EnuCollAsgnReason(oneEnum);
             assertEquals( "FIX895_ENU_COLL_ASGN_REASON", tagData.toFIXLabelString());
-            assertEquals( "895", tagData.toEnumIDString());
+            assertEquals( "895", tagData.toFIXIDString());
             assertEquals( "COLL_ASGN_REASON", tagData.toEnumNameString());
             assertEquals( "CollAsgnReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag895EnuCollAsgnReasonTest {
         // loop around the ENUM and process
         for ( Enum895CollAsgnReason oneEnum : Enum895CollAsgnReason.values()) {
             tagData = new Tag895EnuCollAsgnReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -124,7 +124,7 @@ class Tag895EnuCollAsgnReasonTest {
             tagData = new Tag895EnuCollAsgnReason(oneEnum);
             assertEquals( "Tag895EnuCollAsgnReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

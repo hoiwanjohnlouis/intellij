@@ -47,7 +47,7 @@ public class Tag91DatSecureData extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(this.dataValue.toString());
     }

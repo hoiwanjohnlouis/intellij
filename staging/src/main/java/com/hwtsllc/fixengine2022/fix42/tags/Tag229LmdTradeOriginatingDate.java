@@ -53,7 +53,7 @@ public class Tag229LmdTradeOriginatingDate extends FIX42Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

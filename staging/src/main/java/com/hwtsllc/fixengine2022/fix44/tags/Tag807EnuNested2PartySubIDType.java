@@ -148,7 +148,7 @@ public class Tag807EnuNested2PartySubIDType extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -180,7 +180,7 @@ public class Tag807EnuNested2PartySubIDType extends FIX44Abstract implements Log
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

@@ -40,12 +40,12 @@ class Tag888EnuUnderlyingStipTypeTest {
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
             tagData = new Tag888EnuUnderlyingStipType(oneEnum);
             assertEquals( "FIX888_ENU_UNDERLYING_STIP_TYPE", tagData.toFIXLabelString());
-            assertEquals( "888", tagData.toEnumIDString());
+            assertEquals( "888", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_STIP_TYPE", tagData.toEnumNameString());
             assertEquals( "UnderlyingStipType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag888EnuUnderlyingStipTypeTest {
         // loop around the ENUM and process
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
             tagData = new Tag888EnuUnderlyingStipType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -407,7 +407,7 @@ class Tag888EnuUnderlyingStipTypeTest {
             tagData = new Tag888EnuUnderlyingStipType(oneEnum);
             assertEquals( "Tag888EnuUnderlyingStipType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

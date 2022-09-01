@@ -48,51 +48,51 @@ class Enum808AllocIntermedReqTypeTest {
         Enum808AllocIntermedReqType enumType;
 
         enumType = Enum808AllocIntermedReqType.PENDING_ACCEPT;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "PENDING_ACCEPT", enumType.toEnumNameString() );
         assertEquals( "1 - Pending Accept", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.PENDING_RELEASE;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "PENDING_RELEASE", enumType.toEnumNameString() );
         assertEquals( "2 - Pending Release", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.PENDING_REVERSAL;
-        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "PENDING_REVERSAL", enumType.toEnumNameString() );
         assertEquals( "3 - Pending Reversal", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.ACCEPT;
-        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "ACCEPT", enumType.toEnumNameString() );
         assertEquals( "4 - Accept", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum808AllocIntermedReqType.BLOCK_LEVEL_REJECT;
-        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "BLOCK_LEVEL_REJECT", enumType.toEnumNameString() );
         assertEquals( "5 - Block Level Reject", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum808AllocIntermedReqType.ACCOUNT_LEVEL_REJECT;
-        assertEquals( "6", enumType.toEnumIDString() );
+        assertEquals( "6", enumType.toFIXIDString() );
         assertEquals( "ACCOUNT_LEVEL_REJECT", enumType.toEnumNameString() );
         assertEquals( "6 - Account Level Reject", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

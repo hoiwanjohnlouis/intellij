@@ -43,26 +43,26 @@ class Enum21HandlInstTest {
          *  1-3
          */
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER;
-        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("1", enumType.toFIXIDString());
         assertEquals("AUTOMATIC_EXECUTION_NO_BROKER", enumType.toEnumNameString());
         assertEquals("1 - Automated execution order, private, no Broker intervention", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum21HandlInst.AUTOMATIC_EXECUTION_BROKER_OKAY;
-        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("2", enumType.toFIXIDString());
         assertEquals("AUTOMATIC_EXECUTION_BROKER_OKAY", enumType.toEnumNameString());
         assertEquals("2 - Automated execution order, public, Broker intervention OK", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum21HandlInst.MANUAL_ORDER_BEST_EXECUTION;
-        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("3", enumType.toFIXIDString());
         assertEquals("MANUAL_ORDER_BEST_EXECUTION", enumType.toEnumNameString());
         assertEquals("3 - Manual order, best execution", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

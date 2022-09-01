@@ -47,7 +47,7 @@ public class Tag343UtcTradSesPreCloseTime extends FIX42Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -40,12 +40,12 @@ class Tag837EnuPegLimitTypeTest {
         for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag837EnuPegLimitType(oneEnum);
             assertEquals( "FIX837_ENU_PEG_LIMIT_TYPE", tagData.toFIXLabelString());
-            assertEquals( "837", tagData.toEnumIDString());
+            assertEquals( "837", tagData.toFIXIDString());
             assertEquals( "PEG_LIMIT_TYPE", tagData.toEnumNameString());
             assertEquals( "PegLimitType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag837EnuPegLimitTypeTest {
         // loop around the ENUM and process
         for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag837EnuPegLimitType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -102,7 +102,7 @@ class Tag837EnuPegLimitTypeTest {
             tagData = new Tag837EnuPegLimitType(oneEnum);
             assertEquals( "Tag837EnuPegLimitType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

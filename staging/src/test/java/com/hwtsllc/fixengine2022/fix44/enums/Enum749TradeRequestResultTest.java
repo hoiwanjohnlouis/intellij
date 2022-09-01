@@ -50,74 +50,74 @@ class Enum749TradeRequestResultTest {
         Enum749TradeRequestResult enumType;
 
         enumType = Enum749TradeRequestResult.SUCCESSFUL;
-        assertEquals( "0", enumType.toEnumIDString());
+        assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "SUCCESSFUL", enumType.toEnumNameString());
         assertEquals( "0 - Successful (default)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.UNKNOWN_INSTRUMENT;
-        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "UNKNOWN_INSTRUMENT", enumType.toEnumNameString());
         assertEquals( "1 - Invalid or unknown instrument", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.INVALID_TRADE_TYPE;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "INVALID_TRADE_TYPE", enumType.toEnumNameString());
         assertEquals( "2 - Invalid type of trade requested", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.INVALID_PARTIES;
-        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "INVALID_PARTIES", enumType.toEnumNameString());
         assertEquals( "3 - Invalid parties", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE;
-        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "INVALID_TRANSPORT_TYPE", enumType.toEnumNameString());
         assertEquals( "4 - Invalid transport type requested", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED;
-        assertEquals( "5", enumType.toEnumIDString());
+        assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "INVALID_DESTINATION_REQUESTED", enumType.toEnumNameString());
         assertEquals( "5 - Invalid destination requested", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED;
-        assertEquals( "8", enumType.toEnumIDString());
+        assertEquals( "8", enumType.toFIXIDString());
         assertEquals( "TRADE_REQUEST_TYPE_NOT_SUPPORTED", enumType.toEnumNameString());
         assertEquals( "8 - TradeRequestType not supported", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST;
-        assertEquals( "9", enumType.toEnumIDString());
+        assertEquals( "9", enumType.toFIXIDString());
         assertEquals( "UNAUTHORIZED_REPORT_REQUEST", enumType.toEnumNameString());
         assertEquals( "9 - Unauthorized for Trade Capture Report Request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum749TradeRequestResult.OTHER;
-        assertEquals( "99", enumType.toEnumIDString());
+        assertEquals( "99", enumType.toFIXIDString());
         assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "99 - Other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

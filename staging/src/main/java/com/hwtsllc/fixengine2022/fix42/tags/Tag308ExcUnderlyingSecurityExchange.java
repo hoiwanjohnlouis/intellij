@@ -51,7 +51,7 @@ public class Tag308ExcUnderlyingSecurityExchange extends FIX42Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

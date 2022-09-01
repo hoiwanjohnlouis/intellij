@@ -39,18 +39,18 @@ class Enum827ExpirationCycleTest {
         Enum827ExpirationCycle enumType;
 
         enumType = Enum827ExpirationCycle.EXPIRE_ON_CLOSE;
-        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "EXPIRE_ON_CLOSE", enumType.toEnumNameString() );
         assertEquals( "0 - Expire on trading session close (default)", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum827ExpirationCycle.EXPIRE_ON_OPEN;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "EXPIRE_ON_OPEN", enumType.toEnumNameString() );
         assertEquals( "1 - Expire on trading session open", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

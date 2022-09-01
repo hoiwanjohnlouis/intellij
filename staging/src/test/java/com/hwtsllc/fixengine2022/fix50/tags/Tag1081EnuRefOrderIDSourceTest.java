@@ -40,12 +40,12 @@ class Tag1081EnuRefOrderIDSourceTest {
         for ( Enum1081RefOrderIDSource oneEnum : Enum1081RefOrderIDSource.values()) {
             tagData = new Tag1081EnuRefOrderIDSource(oneEnum);
             assertEquals( "FIX1081_ENU_REF_ORDER_ID_SOURCE", tagData.toFIXLabelString());
-            assertEquals( "1081", tagData.toEnumIDString());
+            assertEquals( "1081", tagData.toFIXIDString());
             assertEquals( "REF_ORDER_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "RefOrderIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag1081EnuRefOrderIDSourceTest {
         // loop around the ENUM and process
         for ( Enum1081RefOrderIDSource oneEnum : Enum1081RefOrderIDSource.values()) {
             tagData = new Tag1081EnuRefOrderIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -102,7 +102,7 @@ class Tag1081EnuRefOrderIDSourceTest {
             tagData = new Tag1081EnuRefOrderIDSource(oneEnum);
             assertEquals( "Tag1081EnuRefOrderIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

@@ -47,7 +47,7 @@ public class Tag503LmdCardStartDate extends FIX43Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

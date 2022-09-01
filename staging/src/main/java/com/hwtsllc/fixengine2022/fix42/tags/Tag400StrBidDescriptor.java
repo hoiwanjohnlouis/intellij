@@ -58,7 +58,7 @@ public class Tag400StrBidDescriptor extends FIX42Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

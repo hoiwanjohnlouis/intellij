@@ -41,11 +41,11 @@ class Tag219EnuBenchmarkTest {
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
             assertEquals( "FIX219_ENU_BENCHMARK", tagData.toFIXLabelString());
-            assertEquals( "219", tagData.toEnumIDString());
+            assertEquals( "219", tagData.toFIXIDString());
             assertEquals( "BENCHMARK", tagData.toEnumNameString());
             assertEquals( "Benchmark (no longer used)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -55,9 +55,9 @@ class Tag219EnuBenchmarkTest {
         // loop around the ENUM and process
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -130,7 +130,7 @@ class Tag219EnuBenchmarkTest {
             tagData = new Tag219EnuBenchmark(oneEnum);
             assertEquals( "Tag219EnuBenchmark\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

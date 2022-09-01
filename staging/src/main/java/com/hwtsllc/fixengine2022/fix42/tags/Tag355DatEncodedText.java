@@ -50,7 +50,7 @@ public class Tag355DatEncodedText extends FIX42Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

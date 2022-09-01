@@ -48,7 +48,7 @@ public class Tag739LmdLegDatedDate extends FIX44Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

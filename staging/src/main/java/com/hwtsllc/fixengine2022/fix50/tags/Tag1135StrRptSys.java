@@ -47,7 +47,7 @@ public class Tag1135StrRptSys extends FIX50Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -40,11 +40,11 @@ class Tag323EnuSecurityResponseTypeTest {
         for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
             assertEquals( "FIX323_ENU_SECURITY_RESPONSE_TYPE", tagData.toFIXLabelString());
-            assertEquals( "323", tagData.toEnumIDString());
+            assertEquals( "323", tagData.toFIXIDString());
             assertEquals( "SECURITY_RESPONSE_TYPE", tagData.toEnumNameString());
             assertEquals( "SecurityResponseType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag323EnuSecurityResponseTypeTest {
         // loop around the ENUM and process
         for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -115,7 +115,7 @@ class Tag323EnuSecurityResponseTypeTest {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
             assertEquals( "Tag323EnuSecurityResponseType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

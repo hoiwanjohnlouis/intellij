@@ -60,74 +60,74 @@ class Enum419BasisPxTypeTest {
          *  2-9, msg types
          */
         enumType = Enum419BasisPxType.CLOSING_PRICE_MORNING;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "CLOSING_PRICE_MORNING", enumType.toEnumNameString());
         assertEquals( "2 - Closing price at morning session", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.CLOSING_PRICE;
-        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "CLOSING_PRICE", enumType.toEnumNameString());
         assertEquals( "3 - Closing price", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.CURRENT_PRICE;
-        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "CURRENT_PRICE", enumType.toEnumNameString());
         assertEquals( "4 - Current price", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.SQ;
-        assertEquals( "5", enumType.toEnumIDString());
+        assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "SQ", enumType.toEnumNameString());
         assertEquals( "5 - SQ", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.VWAP_DAY;
-        assertEquals( "6", enumType.toEnumIDString());
+        assertEquals( "6", enumType.toFIXIDString());
         assertEquals( "VWAP_DAY", enumType.toEnumNameString());
         assertEquals( "6 - VWAP through a day", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.VWAP_MORNING;
-        assertEquals( "7", enumType.toEnumIDString());
+        assertEquals( "7", enumType.toFIXIDString());
         assertEquals( "VWAP_MORNING", enumType.toEnumNameString());
         assertEquals( "7 - VWAP through a morning session", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.VWAP_AFTERNOON;
-        assertEquals( "8", enumType.toEnumIDString());
+        assertEquals( "8", enumType.toFIXIDString());
         assertEquals( "VWAP_AFTERNOON", enumType.toEnumNameString());
         assertEquals( "8 - VWAP through an afternoon session", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.VWAP_DAY_EXCEPT_YORI;
-        assertEquals( "9", enumType.toEnumIDString());
+        assertEquals( "9", enumType.toFIXIDString());
         assertEquals( "VWAP_DAY_EXCEPT_YORI", enumType.toEnumNameString());
         assertEquals( "9 - VWAP through a day except YORI (an opening auction)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -136,40 +136,40 @@ class Enum419BasisPxTypeTest {
          *  A-D, msg types
          */
         enumType = Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI;
-        assertEquals( "A", enumType.toEnumIDString());
+        assertEquals( "A", enumType.toFIXIDString());
         assertEquals( "VWAP_MORNING_EXCEPT_YORI", enumType.toEnumNameString());
         assertEquals( "A - VWAP through a morning session except YORI (an opening auction)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI;
-        assertEquals( "B", enumType.toEnumIDString());
+        assertEquals( "B", enumType.toFIXIDString());
         assertEquals( "VWAP_AFTERNOON_EXCEPT_YORI", enumType.toEnumNameString());
         assertEquals( "B - VWAP through an afternoon session except YORI (an opening auction)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.STRIKE;
-        assertEquals( "C", enumType.toEnumIDString());
+        assertEquals( "C", enumType.toFIXIDString());
         assertEquals( "STRIKE", enumType.toEnumNameString());
         assertEquals( "C - Strike", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum419BasisPxType.OPEN;
-        assertEquals( "D", enumType.toEnumIDString());
+        assertEquals( "D", enumType.toFIXIDString());
         assertEquals( "OPEN", enumType.toEnumNameString());
         assertEquals( "D - Open", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
@@ -178,11 +178,11 @@ class Enum419BasisPxTypeTest {
          *  Z, msg types
          */
         enumType = Enum419BasisPxType.OTHER;
-        assertEquals( "Z", enumType.toEnumIDString());
+        assertEquals( "Z", enumType.toFIXIDString());
         assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "Z - Others", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

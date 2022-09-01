@@ -41,11 +41,11 @@ class Tag28EnuIOITransTypeTest {
             tagData = new Tag28EnuIOITransType(oneEnum);
             assertEquals( "FIX28_ENU_IOI_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "IOI_TRANS_TYPE", tagData.toEnumNameString());
-            assertEquals( "28", tagData.toEnumIDString());
+            assertEquals( "28", tagData.toFIXIDString());
             assertEquals( "IOITransType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag28EnuIOITransTypeTest {
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -95,7 +95,7 @@ class Tag28EnuIOITransTypeTest {
             tagData = new Tag28EnuIOITransType(oneEnum);
             assertEquals( "Tag28EnuIOITransType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

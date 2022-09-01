@@ -40,11 +40,11 @@ class Tag276EnuQuoteConditionTest {
         for ( Enum276QuoteCondition oneEnum : Enum276QuoteCondition.values()) {
             tagData = new Tag276EnuQuoteCondition(oneEnum);
             assertEquals( "FIX276_ENU_QUOTE_CONDITION", tagData.toFIXLabelString());
-            assertEquals( "276", tagData.toEnumIDString());
+            assertEquals( "276", tagData.toFIXIDString());
             assertEquals( "QUOTE_CONDITION", tagData.toEnumNameString());
             assertEquals( "QuoteCondition", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag276EnuQuoteConditionTest {
         // loop around the ENUM and process
         for ( Enum276QuoteCondition oneEnum : Enum276QuoteCondition.values()) {
             tagData = new Tag276EnuQuoteCondition(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -386,7 +386,7 @@ class Tag276EnuQuoteConditionTest {
             tagData = new Tag276EnuQuoteCondition(oneEnum);
             assertEquals( "Tag276EnuQuoteCondition\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

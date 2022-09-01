@@ -49,7 +49,7 @@ public class Tag641PxoLastForwardPoints2 extends FIX43Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

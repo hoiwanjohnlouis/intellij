@@ -83,7 +83,7 @@ public class Tag955MmyLegContractSettlMonth extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

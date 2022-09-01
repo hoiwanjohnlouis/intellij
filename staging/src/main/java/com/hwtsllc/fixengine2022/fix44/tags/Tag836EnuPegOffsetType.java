@@ -60,7 +60,7 @@ public class Tag836EnuPegOffsetType extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
@@ -92,7 +92,7 @@ public class Tag836EnuPegOffsetType extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toDataIDString() {
-        return dataValue.toEnumIDString();
+        return dataValue.toFIXIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data

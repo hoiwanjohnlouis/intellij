@@ -49,22 +49,22 @@ class MyEnumRoundDirectionTest {
         MyEnumRoundDirection enumType;
 
         enumType = MyEnumRoundDirection.AGGRESSIVE;
-        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "AGGRESSIVE", enumType.toEnumNameString());
         assertEquals( "1 - More aggressive - on a buy order round the price up to the " +
                             "nearest tick; on a sell order round down to the nearest tick",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumRoundDirection.PASSIVE;
-        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "PASSIVE", enumType.toEnumNameString());
         assertEquals( "2 - More passive - on a buy order round down to the nearest tick; " +
                             "on a sell order round up to the nearest tick",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

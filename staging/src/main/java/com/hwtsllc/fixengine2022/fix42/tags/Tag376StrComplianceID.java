@@ -47,7 +47,7 @@ public class Tag376StrComplianceID extends FIX42Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

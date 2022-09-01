@@ -146,12 +146,12 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
             assertEquals( "FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE", tagData.toFIXLabelString());
-            assertEquals( "761", tagData.toEnumIDString());
+            assertEquals( "761", tagData.toFIXIDString());
             assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "BenchmarkSecurityIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -160,9 +160,9 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         // loop around the ENUM and process
         for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -302,7 +302,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
             assertEquals( "Tag761EnuBenchmarkSecurityIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

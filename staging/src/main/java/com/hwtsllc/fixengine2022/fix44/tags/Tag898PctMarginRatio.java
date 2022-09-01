@@ -51,7 +51,7 @@ public class Tag898PctMarginRatio extends FIX44Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

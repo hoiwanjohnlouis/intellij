@@ -57,7 +57,7 @@ public class Tag900AmtTotalNetValue extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

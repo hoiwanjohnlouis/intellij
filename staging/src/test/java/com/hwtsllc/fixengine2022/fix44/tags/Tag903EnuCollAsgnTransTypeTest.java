@@ -40,12 +40,12 @@ class Tag903EnuCollAsgnTransTypeTest {
         for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
             tagData = new Tag903EnuCollAsgnTransType(oneEnum);
             assertEquals( "FIX903_ENU_COLL_ASGN_TRANS_TYPE", tagData.toFIXLabelString());
-            assertEquals( "903", tagData.toEnumIDString());
+            assertEquals( "903", tagData.toFIXIDString());
             assertEquals( "COLL_ASGN_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "CollAsgnTransType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -54,9 +54,9 @@ class Tag903EnuCollAsgnTransTypeTest {
         // loop around the ENUM and process
         for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
             tagData = new Tag903EnuCollAsgnTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -107,7 +107,7 @@ class Tag903EnuCollAsgnTransTypeTest {
             tagData = new Tag903EnuCollAsgnTransType(oneEnum);
             assertEquals( "Tag903EnuCollAsgnTransType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

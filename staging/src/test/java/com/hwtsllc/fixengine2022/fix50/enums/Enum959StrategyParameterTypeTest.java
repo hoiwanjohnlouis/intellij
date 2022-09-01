@@ -65,198 +65,198 @@ class Enum959StrategyParameterTypeTest {
         Enum959StrategyParameterType enumType;
 
         enumType = Enum959StrategyParameterType.INT;
-        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "INT", enumType.toEnumNameString() );
         assertEquals( "1 - Int", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.LENGTH;
-        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "LENGTH", enumType.toEnumNameString() );
         assertEquals( "2 - Length", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.NUM_IN_GROUP;
-        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "NUM_IN_GROUP", enumType.toEnumNameString() );
         assertEquals( "3 - NumInGroup", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.SEQ_NUM;
-        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "SEQ_NUM", enumType.toEnumNameString() );
         assertEquals( "4 - SeqNum", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.TAG_NUM;
-        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "TAG_NUM", enumType.toEnumNameString() );
         assertEquals( "5 - TagNum", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum959StrategyParameterType.FLOAT;
-        assertEquals( "6", enumType.toEnumIDString() );
+        assertEquals( "6", enumType.toFIXIDString() );
         assertEquals( "FLOAT", enumType.toEnumNameString() );
         assertEquals( "6 - Float", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.QTY;
-        assertEquals( "7", enumType.toEnumIDString() );
+        assertEquals( "7", enumType.toFIXIDString() );
         assertEquals( "QTY", enumType.toEnumNameString() );
         assertEquals( "7 - Qty", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.PRICE;
-        assertEquals( "8", enumType.toEnumIDString() );
+        assertEquals( "8", enumType.toFIXIDString() );
         assertEquals( "PRICE", enumType.toEnumNameString() );
         assertEquals( "8 - Price", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.PRICE_OFFSET;
-        assertEquals( "9", enumType.toEnumIDString() );
+        assertEquals( "9", enumType.toFIXIDString() );
         assertEquals( "PRICE_OFFSET", enumType.toEnumNameString() );
         assertEquals( "9 - PriceOffset", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.AMT;
-        assertEquals( "10", enumType.toEnumIDString() );
+        assertEquals( "10", enumType.toFIXIDString() );
         assertEquals( "AMT", enumType.toEnumNameString() );
         assertEquals( "10 - Amt", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum959StrategyParameterType.PERCENTAGE;
-        assertEquals( "11", enumType.toEnumIDString() );
+        assertEquals( "11", enumType.toFIXIDString() );
         assertEquals( "PERCENTAGE", enumType.toEnumNameString() );
         assertEquals( "11 - Percentage", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.CHAR;
-        assertEquals( "12", enumType.toEnumIDString() );
+        assertEquals( "12", enumType.toFIXIDString() );
         assertEquals( "CHAR", enumType.toEnumNameString() );
         assertEquals( "12 - Char", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.BOOLEAN;
-        assertEquals( "13", enumType.toEnumIDString() );
+        assertEquals( "13", enumType.toFIXIDString() );
         assertEquals( "BOOLEAN", enumType.toEnumNameString() );
         assertEquals( "13 - Boolean", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.STRING;
-        assertEquals( "14", enumType.toEnumIDString() );
+        assertEquals( "14", enumType.toFIXIDString() );
         assertEquals( "STRING", enumType.toEnumNameString() );
         assertEquals( "14 - String", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.MULTIPLE_CHAR_VALUE;
-        assertEquals( "15", enumType.toEnumIDString() );
+        assertEquals( "15", enumType.toFIXIDString() );
         assertEquals( "MULTIPLE_CHAR_VALUE", enumType.toEnumNameString() );
         assertEquals( "15 - MultipleCharValue", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum959StrategyParameterType.CURRENCY;
-        assertEquals( "16", enumType.toEnumIDString() );
+        assertEquals( "16", enumType.toFIXIDString() );
         assertEquals( "CURRENCY", enumType.toEnumNameString() );
         assertEquals( "16 - Currency", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.EXCHANGE;
-        assertEquals( "17", enumType.toEnumIDString() );
+        assertEquals( "17", enumType.toFIXIDString() );
         assertEquals( "EXCHANGE", enumType.toEnumNameString() );
         assertEquals( "17 - Exchange", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.MONTH_YEAR;
-        assertEquals( "18", enumType.toEnumIDString() );
+        assertEquals( "18", enumType.toFIXIDString() );
         assertEquals( "MONTH_YEAR", enumType.toEnumNameString() );
         assertEquals( "18 - Month-Year", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.UTC_TIMESTAMP;
-        assertEquals( "19", enumType.toEnumIDString() );
+        assertEquals( "19", enumType.toFIXIDString() );
         assertEquals( "UTC_TIMESTAMP", enumType.toEnumNameString() );
         assertEquals( "19 - UTCTimeStamp", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.UTC_TIME_ONLY;
-        assertEquals( "20", enumType.toEnumIDString() );
+        assertEquals( "20", enumType.toFIXIDString() );
         assertEquals( "UTC_TIME_ONLY", enumType.toEnumNameString() );
         assertEquals( "20 - UTCTimeOnly", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum959StrategyParameterType.LOCAL_MKT_TIME;
-        assertEquals( "21", enumType.toEnumIDString() );
+        assertEquals( "21", enumType.toFIXIDString() );
         assertEquals( "LOCAL_MKT_TIME", enumType.toEnumNameString() );
         assertEquals( "21 - LocalMktTime", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.UTC_DATE;
-        assertEquals( "22", enumType.toEnumIDString() );
+        assertEquals( "22", enumType.toFIXIDString() );
         assertEquals( "UTC_DATE", enumType.toEnumNameString() );
         assertEquals( "22 - UTCDate", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.DATA;
-        assertEquals( "23", enumType.toEnumIDString() );
+        assertEquals( "23", enumType.toFIXIDString() );
         assertEquals( "DATA", enumType.toEnumNameString() );
         assertEquals( "23 - Data", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum959StrategyParameterType.MULTIPLE_STRING_VALUE;
-        assertEquals( "24", enumType.toEnumIDString() );
+        assertEquals( "24", enumType.toFIXIDString() );
         assertEquals( "MULTIPLE_STRING_VALUE", enumType.toEnumNameString() );
         assertEquals( "24 - MultipleStringValue", enumType.toEnumDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }

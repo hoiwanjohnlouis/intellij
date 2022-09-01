@@ -48,7 +48,7 @@ public class Tag1125LmdOrigTradeDate extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

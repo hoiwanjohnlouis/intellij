@@ -48,7 +48,7 @@ public class Tag105StrWaveNo extends FIX30Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -49,7 +49,7 @@ public class Tag763StrUnderlyingSecuritySubType extends FIX44Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

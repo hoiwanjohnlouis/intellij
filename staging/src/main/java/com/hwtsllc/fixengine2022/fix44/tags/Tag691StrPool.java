@@ -47,7 +47,7 @@ public class Tag691StrPool extends FIX44Abstract implements LogValuePairString, 
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

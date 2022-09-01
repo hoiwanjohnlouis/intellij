@@ -49,7 +49,7 @@ public class Tag524StrNestedPartyID extends FIX43Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

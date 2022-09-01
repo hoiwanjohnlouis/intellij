@@ -40,11 +40,11 @@ class Tag281EnuMDReqRejReasonTest {
         for ( Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
             tagData = new Tag281EnuMDReqRejReason(oneEnum);
             assertEquals( "FIX281_ENU_MD_REQ_REJ_REASON", tagData.toFIXLabelString());
-            assertEquals( "281", tagData.toEnumIDString());
+            assertEquals( "281", tagData.toFIXIDString());
             assertEquals( "MD_REQ_REJ_REASON", tagData.toEnumNameString());
             assertEquals( "MDReqRejReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -54,9 +54,9 @@ class Tag281EnuMDReqRejReasonTest {
         // loop around the ENUM and process
         for ( Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
             tagData = new Tag281EnuMDReqRejReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toFIXIDString() + "=" + oneEnum.toFIXIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -158,7 +158,7 @@ class Tag281EnuMDReqRejReasonTest {
             tagData = new Tag281EnuMDReqRejReason(oneEnum);
             assertEquals( "Tag281EnuMDReqRejReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
-                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +

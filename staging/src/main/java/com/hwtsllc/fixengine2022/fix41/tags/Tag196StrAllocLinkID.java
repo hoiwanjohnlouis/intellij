@@ -50,7 +50,7 @@ public class Tag196StrAllocLinkID extends FIX41Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

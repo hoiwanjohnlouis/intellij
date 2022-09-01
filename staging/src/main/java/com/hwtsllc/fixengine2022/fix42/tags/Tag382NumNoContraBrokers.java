@@ -47,7 +47,7 @@ public class Tag382NumNoContraBrokers extends FIX42Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toEnumIDString()
+        return toFIXIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
