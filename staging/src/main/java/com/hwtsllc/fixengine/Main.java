@@ -14,17 +14,22 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022;
+package com.hwtsllc.fixengine;
 
-import org.junit.jupiter.api.Test;
+public class Main {
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+    /*
+     *
+     */
+    public static void main(String[] args) {
+        String hello = "hello"
+                .concat(" ")
+                .concat("from main.");
+        //System.out.println(hello);
 
-class MainTest {
-    @Test
-    void Test() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        String goodbye = "goodbye"
+                .concat(" ")
+                .concat("from main.");
+        //System.out.println(goodbye);
     }
 }
