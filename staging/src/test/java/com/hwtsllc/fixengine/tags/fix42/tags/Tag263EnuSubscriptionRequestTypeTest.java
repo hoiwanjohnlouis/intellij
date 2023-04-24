@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine.tags.fix42.tags;
 
-import com.hwtsllc.fixengine2022.fix42.enums.Enum263SubscriptionRequestType;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine.tags.fix42.enums.Enum263SubscriptionRequestType;
+import com.hwtsllc.fixengine.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

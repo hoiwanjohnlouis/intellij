@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine.tags.fix43.tags;
 
-import com.hwtsllc.fixengine2022.fix43.enums.Enum550CrossPrioritization;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine.tags.fix43.enums.Enum550CrossPrioritization;
+import com.hwtsllc.fixengine.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

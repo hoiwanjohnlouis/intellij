@@ -1,7 +1,6 @@
 package com.hwtsllc.fixengine.datatypes;
 
-import com.hwtsllc.fixengine2022.fix41.tags.Tag142StrSenderLocationID;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine.tags.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import com.hwtsllc.fixengine.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
