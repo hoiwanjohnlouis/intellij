@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine.tags.fix42.tags;
 
 import com.hwtsllc.fixengine2022.fix42.enums.Enum274TickDirection;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

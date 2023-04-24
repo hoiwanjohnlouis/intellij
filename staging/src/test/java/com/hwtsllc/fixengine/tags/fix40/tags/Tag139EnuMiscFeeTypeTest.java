@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix40.tags;
+package com.hwtsllc.fixengine.tags.fix40.tags;
 
 import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

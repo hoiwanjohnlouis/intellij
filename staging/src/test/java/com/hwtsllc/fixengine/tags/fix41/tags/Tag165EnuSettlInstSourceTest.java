@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine.tags.fix41.tags;
 
 import com.hwtsllc.fixengine2022.fix41.enums.Enum165SettlInstSource;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.msgs.admin;
+package com.hwtsllc.fixengine.msgs.admin;
 
 import org.junit.jupiter.api.Test;
 

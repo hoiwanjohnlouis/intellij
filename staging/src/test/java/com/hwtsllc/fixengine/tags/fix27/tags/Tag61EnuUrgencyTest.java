@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix27.tags;
+package com.hwtsllc.fixengine.tags.fix27.tags;
 
 import com.hwtsllc.fixengine2022.fix27.enums.Enum61Urgency;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

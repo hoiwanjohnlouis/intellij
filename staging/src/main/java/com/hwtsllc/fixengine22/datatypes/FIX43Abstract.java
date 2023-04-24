@@ -20,9 +20,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 public abstract class FIX43Abstract implements LogFIXString, LogVerboseString {
-    private FIX43 fixValue;
+    private com.hwtsllc.fixengine2022.datatypes.FIX43 fixValue;
 
-    public void setFixType(FIX43 fixType) {
+    public void setFixType( com.hwtsllc.fixengine2022.datatypes.FIX43 fixType) {
         this.fixValue = fixType;
     }
     @Override

@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine.tags.fix43.tags;
 
 import com.hwtsllc.fixengine2022.fix43.enums.Enum653SecDefStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

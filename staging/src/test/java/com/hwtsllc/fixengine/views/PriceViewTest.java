@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.views;
+package com.hwtsllc.fixengine.views;
 
 import org.junit.jupiter.api.Test;
 

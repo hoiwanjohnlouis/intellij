@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix44.tags;
+package com.hwtsllc.fixengine.tags.fix44.tags;
 
 import com.hwtsllc.fixengine2022.fix44.enums.Enum853ShortSaleReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

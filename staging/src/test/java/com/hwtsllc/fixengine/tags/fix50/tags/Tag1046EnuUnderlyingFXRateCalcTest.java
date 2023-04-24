@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix50.tags;
+package com.hwtsllc.fixengine.tags.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumFXRateCalc;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;

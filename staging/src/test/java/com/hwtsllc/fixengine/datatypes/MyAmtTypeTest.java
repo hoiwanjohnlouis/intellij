@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.datatypes;
+package com.hwtsllc.fixengine.datatypes;
 
 import com.hwtsllc.fixengine2022.fix27.tags.Tag12AmtCommission;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
