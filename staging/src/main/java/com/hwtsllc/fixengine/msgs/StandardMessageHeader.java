@@ -16,15 +16,17 @@
 
 package com.hwtsllc.fixengine.msgs;
 
-import com.hwtsllc.fixengine2022.datatypes.*;
-import com.hwtsllc.fixengine.tags.fix27.enums.Enum8BeginString;
-import com.hwtsllc.fixengine2022.fix27.tags.*;
-import com.hwtsllc.fixengine2022.fix40.tags.*;
-import com.hwtsllc.fixengine.tags.fix41.tags.Tag142StrSenderLocationID;
-import com.hwtsllc.fixengine.tags.fix41.tags.Tag143StrTargetLocationID;
-import com.hwtsllc.fixengine.tags.fix41.tags.Tag144StrOnBehalfOfLocationID;
-import com.hwtsllc.fixengine.tags.fix41.tags.Tag145StrDeliverToLocationID;
-import com.hwtsllc.fixengine2022.fix42.tags.*;
+import com.hwtsllc.fixengine.datatypes.*;
+import com.hwtsllc.fixengine.tags.fix27.*;
+import com.hwtsllc.fixengine.enums.fix27.Enum8BeginString;
+import com.hwtsllc.fixengine.tags.fix27.tags.*;
+import com.hwtsllc.fixengine.tags.fix40.*;
+import com.hwtsllc.fixengine.tags.fix40.tags.*;
+import com.hwtsllc.fixengine.tags.fix41.Tag142StrSenderLocationID;
+import com.hwtsllc.fixengine.tags.fix41.Tag143StrTargetLocationID;
+import com.hwtsllc.fixengine.tags.fix41.Tag144StrOnBehalfOfLocationID;
+import com.hwtsllc.fixengine.tags.fix41.Tag145StrDeliverToLocationID;
+import com.hwtsllc.fixengine.tags.fix42.*;
 
 public class StandardMessageHeader {
     // Tags are ordered by FIX Protocol Specification

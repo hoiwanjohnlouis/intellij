@@ -19,9 +19,9 @@ package com.hwtsllc.fixengine.msgs;
 import com.hwtsllc.fixengine.datatypes.MyDataType;
 import com.hwtsllc.fixengine.datatypes.MyLengthType;
 import com.hwtsllc.fixengine.datatypes.MyStringType;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag10StrCheckSum;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag89DatSignature;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag93LenSignatureLength;
+import com.hwtsllc.fixengine.tags.fix27.Tag10StrCheckSum;
+import com.hwtsllc.fixengine.tags.fix27.Tag89DatSignature;
+import com.hwtsllc.fixengine.tags.fix27.Tag93LenSignatureLength;
 import com.hwtsllc.fixengine.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine.interfaces.LogVerboseString;
 

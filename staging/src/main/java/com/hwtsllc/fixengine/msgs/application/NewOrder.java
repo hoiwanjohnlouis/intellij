@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine.msgs.application;
 
 import com.hwtsllc.fixengine.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag60UtcTransactTime;
-import com.hwtsllc.fixengine.tags.fix40.tags.Tag140PrcPrevClosePx;
+import com.hwtsllc.fixengine.tags.fix27.Tag60UtcTransactTime;
+import com.hwtsllc.fixengine.tags.fix40.Tag140PrcPrevClosePx;
 
 public class NewOrder implements Comparable {
     private final Tag140PrcPrevClosePx tag140PrcPrevClosePx;

@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine.views;
 
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag35EnuMsgType;
+import com.hwtsllc.fixengine.tags.fix27.Tag35EnuMsgType;
 
 public class TradeView {
     private final StringBuilder stringBuilder = new StringBuilder();

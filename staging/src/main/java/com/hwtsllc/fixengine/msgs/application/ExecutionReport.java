@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine.msgs.application;
 
 import com.hwtsllc.fixengine.datatypes.MyStringType;
 import com.hwtsllc.fixengine.datatypes.MyEnumMsgType;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag55StrSymbol;
+import com.hwtsllc.fixengine.tags.fix27.Tag55StrSymbol;
 
 public class ExecutionReport {
     private final MyEnumMsgType tag35MsgType;

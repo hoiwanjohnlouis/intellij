@@ -18,8 +18,8 @@ package com.hwtsllc.fixengine.views;
 
 import com.hwtsllc.fixengine.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine.datatypes.MyEnumMsgType;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag60UtcTransactTime;
-import com.hwtsllc.fixengine.tags.fix27.tags.Tag35EnuMsgType;
+import com.hwtsllc.fixengine.tags.fix27.Tag60UtcTransactTime;
+import com.hwtsllc.fixengine.tags.fix27.Tag35EnuMsgType;
 
 public class PriceView {
     private final Tag60UtcTransactTime tag60UtcTransactTime;
