@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 /**
- * <p> The key object; this class is take from the app-engine datastore (mostly) implementation. It is also Serializable and GWT-safe,
+ * <p> The key object; this class is take from the app-fix datastore (mostly) implementation. It is also Serializable and GWT-safe,
  * enabling your entity objects to be used for GWT RPC should you so desire. </p> <p/> <p> You may use normal DBRef objects as
  * relationships
  * in your entities if you desire neither type safety nor GWT-ability. </p>
